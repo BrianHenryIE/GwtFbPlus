@@ -21,15 +21,15 @@ Dependencies
 ------------
 
 [Project Lombok](http://projectlombok.org/)  (v0.11.4)
-Is a tool for making getters and setters with annotations (amongst other features, but 
+is a tool for making getters and setters with annotations (amongst other features, but 
 that's all it's being used for here). 
 
 [Apache Commons Codec](http://commons.apache.org/proper/commons-codec/) (v1.5)
-Is used for the base 64 decoding of the Facebook signed request. There is a method in the 
-Java Standard library that does this, but it wasn't behaving. <- this comment isn't needed here?
+is used for the base 64 decoding of the Facebook signed request. There is a method in the 
+Java Standard library that does this, but it wasn't behaving.
 
 [google-gson](https://code.google.com/p/google-gson/) (v2.2.4)
-Google's library for dealing with json server side.
+is Google's library for dealing with json server side.
 
 Using the library
 -----------------
@@ -92,19 +92,18 @@ That's the server side done, if your GWT code is minimal at this stage, you can 
     
     </html>
 
-The only difference should be the <script id="signedRequest"> which is picked up when Facebook posts data to the servlet.
+The only difference should be the \<script id="signedRequest"\> which is picked up when Facebook posts data to the servlet.
 
 <dt>Get Firefox</dt>
 
-To get the GWT plugin working inside the Facebook iframe, you'll have to download an older version of Firefox. I use 15, maybe some newer ones work but there's a bug report out somewhere there for this problem. It only affects hosted mode, not deployed apps.
+For the GWT plugin to inside the Facebook iframe, you'll have to download an older version of Firefox. I use 15, maybe some newer ones work but there's a bug report out somewhere there for this problem. It only affects hosted mode, not deployed apps.
 
 Download: [Firefox 15](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/15.0/), [Firebug](http://getfirebug.com/).
 
 <dt>Edit hosted.html</dt>
 
-You'll also need to edit war/app_name/hosted.html
-to remove ".top" from "var topWin = window.top;"
-about 70% down the file. 
+You'll also need to edit war/app_name/hosted.html to remove ".top" from "var topWin = window.top;" about 70% down the file.
+ 
       var pluginFinders = [
         findPluginXPCOM,
         findPluginObject,
@@ -118,7 +117,7 @@ I have System.out.println("Entry point"); at the beginning of my entry point so 
  
 <dt>Edit Hosts</dt>
 
-I can't remember what the issue was, now, but rather than localhost or 127.0.0.1 behaving well in your developers.facebook.com/apps settings, I have a fake domain (testbed.org.org) in my hosts file that Facebook posts to.
+I can't remember what the issue was, now, but rather than localhost or 127.0.0.1 behaving well in your developers.facebook.com/apps settings, I have a fake domain (testbed.org.org) in my hosts file that Facebook posts to. Maybe it was Same Origin Policy related.
 
 <dt>Turn off Secure Browsing</dt>
 
