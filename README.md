@@ -12,7 +12,7 @@ Feedback on my code would be appreciated. My email address is brian.henry@sorton
 Quickstart
 ----------
 
-Download gwtfb.jar and gwtfbplus.jar, add them to your build path and add to your .gwt.xml file:
+Download [gwtfb.jar](http://www.sortons.ie/gwt/gwtfb.jar) and [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add them to your build path and add to your .gwt.xml file:
 
     <inherits name='com.gwtfb.GwtFB'/>
     <inherits name='ie.sortons.gwtfbplus.GwtFBplus'/>
