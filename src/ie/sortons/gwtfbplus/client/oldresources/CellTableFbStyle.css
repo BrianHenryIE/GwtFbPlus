@@ -1,0 +1,126 @@
+.cellTableWidget {
+  
+text-align: left;
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+font-size: 11px;
+
+}
+
+.cellTableFirstColumn {
+  
+}
+
+.cellTableLastColumn {
+  
+}
+
+.cellTableFooter {
+
+
+}
+
+.cellTableHeader {
+	padding: 1px 5px;
+	background: url("http://static.ak.fbcdn.net/rsrc.php/v1/ya/r/fl22l7QTCF8.png") repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #999999;
+    border-bottom: 1px solid #888888;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    cursor: default;
+    
+
+}
+
+.cellTableCell {
+  padding: 1px 5px;
+  
+text-align: left;
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+font-size: 11px;
+  
+}
+
+.cellTableFirstColumnFooter {
+  border-left: 0px;
+}
+
+.cellTableFirstColumnHeader {
+  
+}
+
+.cellTableLastColumnFooter {
+  
+}
+
+.cellTableLastColumnHeader {
+  
+}
+
+.cellTableEvenRow {
+  background-color: #ffffff;
+}
+
+.cellTableOddRow {
+  background-color: ##ffffff;
+}
+
+.cellTableHoveredRow {
+  background-color: #ffffff;
+}
+
+.cellTableSelectedRow {
+  background-color: #ffffff;
+  color: #333333;
+  height: auto;
+  overflow: auto;
+}
+
+.cellTableKeyboardSelectedRow {
+  
+}
+
+.cellTableKeyboardSelectedCell {
+  
+}
+
+@sprite .cellTableLoading {
+  gwt-image: 'cellTableLoading';
+  margin: 3px;
+}
+
+
+.cellTableSortedHeaderAscending{}
+
+.cellTableOddRowCell{
+	
+}
+.cellTableKeyboardSelectedRowCell{}
+.cellTableSelectedRowCell{}
+.cellTableEvenRowCell{
+	
+}
+.cellTableSortableHeader{}
+.cellTableHoveredRowCell{}
+.cellTableSortedHeaderDescending{}
+
+
+
+.myReservationsContainer {
+	border-color: #E9E9E9; 
+	border-width: 0 0 1px 0; 
+	margin: 15px 0 15px 0; 
+	height: 50px;
+}
+
+.myReservationsImage {
+	float:left; 
+	margin-right:10px;
+}
+
+.myReservationsContent {
+	float:left; 
+	width: 80%;
+	
+}
+
+
+

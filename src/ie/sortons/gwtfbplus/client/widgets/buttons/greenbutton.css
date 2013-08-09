@@ -1,0 +1,67 @@
+.upFace {	   
+	
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:	11px;
+	font-weight: bold;
+	color:	#333333;
+	text-decoration: none;
+	line-height:	14px;
+	text-align: center;
+	
+
+	margin: 0;
+	padding: 3px 6px;
+	
+	border: 1px solid #999999;
+	border-bottom-color: #888888;	
+	box-shadow:	rgba(0, 0, 0, 0.1) 0 1px 0 0;
+	
+	cursor: pointer;
+	
+	
+	background-image: url(http://static.ak.fbcdn.net/rsrc.php/v1/yx/r/NL9V9jlBmDa.png);
+	background-repeat: no-repeat;
+	background-position: 0 -294px;
+	background-color: #69A74E;
+	border-color: #3B6E22 #3B6E22 #2C5115;
+	
+	color: white;
+}
+
+
+.down {
+	
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:	11px;
+	font-weight: bold;
+	
+	line-height:	14px;
+	text-align:	center;	
+	
+	margin: 0px 1px;
+	
+	padding: 2px 6px 2px 6px;
+	border-width: 1px;
+	background: none;
+	background-color: #609946;
+	
+	
+}
+
+.down:focus{
+	outline: none;
+}
+
+.upFace:focus{
+	outline: none;
+}
+
+.upHover {
+	
+}
+
+.disabled {
+	opacity : 0.4;
+    filter: alpha(opacity=40); /*for IE*/
+	
+}

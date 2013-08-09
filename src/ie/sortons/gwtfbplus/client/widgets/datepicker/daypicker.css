@@ -1,0 +1,155 @@
+@external gwt-DatePicker, datePickerNextButton, datePickerWeekdayLabel, datePickerDayIsHighlighted, datePickerWeekendLabel, datePickerDayIsFiller, datePickerMonth, datePickerDayIsValue, datePickerMonthSelector, datePickerDay, datePickerDayIsValueAndHighlighted, datePickerDayIsToday, datePickerPreviousButton, datePickerDayIsDisabled, datePickerDays, datePickerDayIsWeekend;	 
+
+.fbStyleDatePicker {
+	
+	border: 1px solid #CCC;
+	border-bottom: 2px solid #293E6C;
+	border-top-color: #333333;
+	border-right-color: #777777;
+	border-bottom-color: #293E6C;
+	border-left-color: #777777;
+	width: 210px;
+
+}
+
+.fbStyleDatePicker tr {
+
+		height: 18px;
+}
+
+/*
+.datePickerDays tr {
+		height: 18px;
+	}
+*/
+
+.datePickerDays td {
+	text-align: center;
+}
+
+.fbStyleDatePicker .gwt-DatePicker {
+  border: 1px solid #ccc;
+  border-top:1px solid #999;
+  cursor: default;
+  
+  
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 11px;
+  color: #333333;
+  
+}
+.fbStyleDatePicker .gwt-DatePicker td,
+.fbStyleDatePicker .datePickerMonthSelector td:focus {
+  outline: none;
+}
+.fbStyleDatePicker .datePickerDays {
+  width: 100%;
+  background: white;
+
+}
+
+.fbStyleDatePicker .datePickerDay,
+.fbStyleDatePicker .datePickerWeekdayLabel,
+.fbStyleDatePicker .datePickerWeekendLabel {
+  font-size: 85%;
+  text-align: center;
+  /* padding: 2px; */
+  outline: none;
+  font-weight:normal;
+  color: #666666;
+}
+
+.fbStyleDatePicker .datePickerWeekdayLabel,
+.fbStyleDatePicker .datePickerWeekendLabel {
+  background: #F2F2F2;
+  /* padding: 0px 4px 2px; */
+  text-align: center;
+  cursor: default;
+  color:#555555;
+  font-size: 9px;
+  font-weight: bold;
+  padding-top:2px;
+  
+  border:none;
+  
+  border-bottom: 1px solid #BBBBBB;
+ 
+}
+
+.fbStyleDatePicker .datePickerDay {
+  padding: 0;
+  text-align: center;
+  cursor: hand;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin:2px;
+}
+
+.fbStyleDatePicker .datePickerDayIsWeekend {
+  background: transparent;
+}
+
+.fbStyleDatePicker .datePickerDayIsFiller {
+  color: #999;
+  font-weight:normal;
+  
+}
+.fbStyleDatePicker .datePickerDayIsValue {
+  
+  background-color: #DDDDDD;
+  font-weight: bold;
+  width: 14.2857%;
+}
+.fbStyleDatePicker .datePickerDayIsDisabled {
+  color: #AAAAAA;
+  font-style: italic;
+}
+.fbStyleDatePicker .datePickerDayIsHighlighted {
+  background: #DFE4EE;
+  
+  border: 1px solid #BEC8DD;
+}
+.fbStyleDatePicker .datePickerDayIsValueAndHighlighted {
+  background: #d7dfe8;
+}
+.fbStyleDatePicker .datePickerDayIsToday {
+  /* padding: 3px;
+  color: #fff;
+  background: url(images/hborder.png) repeat-x 0px -2607px; */
+  background: none;
+  
+  /* we want the date that was last selected highlighted, not today */
+  /* border: 1px solid #BEC8DD; */
+  border: 0;
+}
+
+.fbStyleDatePicker .datePickerMonthSelector {
+  width: 100%;
+  padding: 0;
+  background-color: #6D84B7;
+  height:18px;
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 11px;
+  color: #FFFFFF;
+}
+.fbStyleDatePicker td.datePickerMonth {
+  background-color: #6D84B7;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 100%;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.fbStyleDatePicker .datePickerPreviousButton,
+.fbStyleDatePicker .datePickerNextButton {
+  font-size: 120%;
+  line-height: 1em;
+  color: #FFFFFF;
+  cursor: hand;
+  cursor: pointer;
+  font-weight: bold;
+  /* padding: 0px 4px; */
+  text-align: center;
+  outline: none;
+}

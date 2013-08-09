@@ -1,0 +1,44 @@
+.normal {	   
+	pointer: hand;
+	border: 0px;
+	margin: 0px;
+	margin-left: -1px;
+	padding: 2px 6px 2px 6px;
+	text-decoration: none;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:	11px;
+	font-weight: bold;
+	color:	#333333;
+	line-height:	14px;
+	text-align: center;
+	
+  }
+  
+.selected {
+	margin-right: 6em; 
+	margin-top: 8px; 
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:	11px;
+	font-weight: bold;
+	color:	#FFFFFF;
+	line-height:	14px;
+	text-align:	center;	
+	background-color:	#5B74A8;
+	background-image:	url("http://static.ak.fbcdn.net/rsrc.php/v1/yj/r/hay0UmRlKwV.png");
+	background-repeat:	no-repeat;
+	background-position:	0 -98px;
+	border-radius: 0px;
+	margin: 0px;
+	margin-left: 3px;
+	padding: 2px 6px 2px 6px;
+	border-width: 1px;
+	border-color: #29447E;
+	border-bottom-color: #1A356E;
+	
+	border-style:	solid;
+	box-shadow:	rgba(0, 0, 0, 0.1) 0 1px 0 0;
+	cursor: default;
+}
+.upHover {
+	
+}
