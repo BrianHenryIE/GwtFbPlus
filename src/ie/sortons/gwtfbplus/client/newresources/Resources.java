@@ -1,6 +1,6 @@
 package ie.sortons.gwtfbplus.client.newresources;
 
-import ie.sortons.gwtfbplus.client.newresources.Resources;
+
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
@@ -14,6 +14,10 @@ public interface Resources extends ClientBundle {
 	@Source("style.css")
 	@CssResource.NotStrict
 	CssResource css();
+
+	@Source("gwtfbplus.css")
+	@CssResource.NotStrict
+	CssResource newCss();
 
 
 	@Source("map_pushpin.png")

@@ -1,0 +1,21 @@
+/* taken from Facebook */
+form{margin:0;padding:0}
+label{cursor:pointer;color:#666;font-weight:bold;vertical-align:middle}
+label input{font-weight:normal}
+textarea{border:1px solid #bdc7d8;margin:0;padding:3px;-webkit-appearance:none;-webkit-border-radius:0}
+textarea{max-width:100%}
+select{border:1px solid #bdc7d8;padding:2px}
+body{background:#fff;color:#333;line-height:1.28;margin:0;padding:0;text-align:left;direction:ltr;unicode-bidi:embed}
+body, button, input, label, select, td, table, table td, textarea{font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-size:11px}
+h1, h2, h3, h4, h5, h6{font-size:13px;color:#333;margin:0;padding:0}
+h1{font-size:14px}
+h4, h5, h6{font-size:11px}
+p{margin:1em 0}
+a{color:#3b5998;cursor:pointer;text-decoration:none}
+button{margin:0}
+a:hover{text-decoration:underline}
+img{border:0}
+hr{background:#d9d9d9;border-width:0;color:#d9d9d9;height:1px}
+.center{margin-left:auto;margin-right:auto}
+
+table{word-wrap:normal}
