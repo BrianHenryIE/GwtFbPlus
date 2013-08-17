@@ -11,14 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 public class LandingPageServlet extends HttpServlet {
-	
+
 	private String gwtEntryPoint;
+
+	private String appId;
 
 	private String signedRequestData = "";
 
+	private String httpOrS(HttpServletRequest request){
+		return request.getRequestURL().toString().replaceAll("(https?://).*", "$1");	
+	}
 	
-	protected LandingPageServlet(String gwtEntryPoint){
+	protected LandingPageServlet(String gwtEntryPoint, String appId){
 		this.gwtEntryPoint = gwtEntryPoint;
+		this.appId = appId;
 	}
 	
 	
@@ -32,7 +38,34 @@ public class LandingPageServlet extends HttpServlet {
 				"    var _sr_data = " + signedRequest.toJsonString() +
 				"\n  </script>\n\n";
 		
-		doGet(request, response);
+		// If the app has been added as a Page tab, it redirects to the canvas with a URL:
+		// http://apps.facebook.com/sortonsdev/?tabs_added[356718097671739]=1#_=_
+		// or if it's added to multiple pages:
+		// http://apps.facebook.com/sortonsdev/?tabs_added[367864846557326]=1&tabs_added[356718097671739]=1#_=_
+		// Regex for extracting the url from wall posts
+		
+		if (request.getHeader("referer").matches(".*tabs_added%5B(\\d+)%5D.*")) {
+					
+		    // If the Canvas load was a redirect from adding the page tab
+			// redirect to the page that added it, at the app's new tab
+			String redirectTo = httpOrS(request) + "www.facebook.com/"+request.getHeader("referer").replaceAll(".*tabs_added%5B(\\d+)%5D.*", "$1")+"?sk=app_"+appId;
+			
+			PrintWriter out = response.getWriter();
+			out.print("<script>window.top.location.href = \"" + redirectTo + "\";</script>");
+			
+			// TODO
+			// Put some text here in case the redirect doesn't work (why wouldn't it?)
+			// If multiple pages have had the app added, show a list rather than redirect.
+			// Do it with GWT? The app will probably be cached already 
+			
+		} else {
+			doGet(request, response);
+		}
+		
+		
+		// TODO
+		// The "Go to application" link in the admin section of a Page links to 
+		// http://apps.facebook.com/sortonsdev/?fb_page_id=176727859052209
 	}
 	
 	
@@ -40,7 +73,7 @@ public class LandingPageServlet extends HttpServlet {
 			throws ServletException, IOException {
 	
 		System.out.println("Servlet execution... " + request.getMethod());
-	            
+	    		
 		PrintWriter out = response.getWriter();
 		
 		// Write out head 
