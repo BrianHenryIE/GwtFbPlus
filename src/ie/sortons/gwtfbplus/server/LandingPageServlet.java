@@ -17,6 +17,7 @@ public class LandingPageServlet extends HttpServlet {
 	private String appId;
 
 	private String signedRequestData = "";
+	private String overflow = "";
 
 	private String httpOrS(HttpServletRequest request){
 		return request.getRequestURL().toString().replaceAll("(https?://).*", "$1");	
@@ -37,6 +38,9 @@ public class LandingPageServlet extends HttpServlet {
 		signedRequestData = "  <script id=\"signedRequest\">\n" +
 				"    var _sr_data = " + signedRequest.toJsonString() +
 				"\n  </script>\n\n";
+		
+		// This isn't needed/desirable outside the fb canvas
+		overflow = " style=\"overflow: hidden\"";
 		
 		// If the app has been added as a Page tab, it redirects to the canvas with a URL:
 		// http://apps.facebook.com/sortonsdev/?tabs_added[356718097671739]=1#_=_
@@ -78,7 +82,7 @@ public class LandingPageServlet extends HttpServlet {
 		
 		// Write out head 
 		out.print("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> \n" + // As specified for Bing Maps API
-				"<html xmlns=\"http://www.w3.org/1999/xhtml\" style=\"overflow: hidden\"> \n\n" +
+				"<html xmlns=\"http://www.w3.org/1999/xhtml\""+overflow+"> \n\n" +
 				"<head> \n\n" +
 				"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> \n\n" +
 				signedRequestData + // If available, print the Signed Request 
@@ -87,7 +91,7 @@ public class LandingPageServlet extends HttpServlet {
 				"</head> \n\n");
 		
 		// Write out body
-		out.print("<body style=\"overflow=hidden;\"> \n\n" +
+		out.print("<body"+overflow+"> \n\n" +
 				"  <div id='fb-root'></div> \n\n" + // required for Facebook API
 				"  <div id=\"gwt\"></div> \n\n" + // root of document for GWT
 				"</body> \n\n");
