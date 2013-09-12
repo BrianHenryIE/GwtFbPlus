@@ -40,6 +40,7 @@ public class LandingPageServlet extends HttpServlet {
 				"\n  </script>\n\n";
 		
 		// This isn't needed/desirable outside the fb canvas
+		// TODO may be deprecated?
 		overflow = " style=\"overflow: hidden\"";
 		
 		// If the app has been added as a Page tab, it redirects to the canvas with a URL:
@@ -52,6 +53,7 @@ public class LandingPageServlet extends HttpServlet {
 					
 		    // If the Canvas load was a redirect from adding the page tab
 			// redirect to the page that added it, at the app's new tab
+			//TODO Test this... it didn't seem to work once, though the URL worked when tested in isolation
 			String redirectTo = httpOrS(request) + "www.facebook.com/"+request.getHeader("referer").replaceAll(".*tabs_added%5B(\\d+)%5D.*", "$1")+"?sk=app_"+appId;
 			
 			PrintWriter out = response.getWriter();
