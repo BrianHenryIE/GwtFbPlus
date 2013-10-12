@@ -4,75 +4,69 @@
   <ui:style type="ie.sortons.gwtfbplus.client.widgets.popups.ToolTipPopup.Styles">
   	.popup {
 		border: 0;
-		
+
 		overflow: hidden;
 	}
 	.popup .popupContent {
 		/* Not useful? it exists in the popup panel anyway */
-	
+
 	}
-	
+
 	.popupGlass {
 		background-color: #fff; /* White glass */
   		opacity: 0.6;
   		filter: alpha(opacity=60);
 	}
-	
-  	.panel {
-	
+
+  	.rightNotch, .leftNotch {
+
 		position: relative;
 		bottom: 38px;
-	
+
 		font-family:	"lucida grande",tahoma,verdana,arial,sans-serif;
   		color: #FFFFFF;
   		font-size: 11px;
   		
 		text-align: left;
 		background-color: #282828;
-		
+
 		padding: 4px 8px;
-		
+
 		/* max-width: 260px; */
-		
-		right: -3px;
   	}
-	
-	
-	
-	.panel:after, .panel:before {
+
+
+
+	.rightNotch:after, .rightNotch:before, .leftNotch:after, .leftNotch:before {
 		border: solid transparent;
 		content: ' ';
 		height: 0;
 		top: 100%;
 		position: absolute;
 		width: 0;
+	}
+
+	.leftNotch{
 		
 	}
-	
-	.panel:after {
+	.leftNotch:after{
+		border-width: 4px;
+		border-top-color: #282828;
+		left: 5px;
+	}
+
+
+	.rightNotch {
+
+	}	
+	.rightNotch:after {
 		border-width: 4px;
 		border-top-color: #282828;
 		right: 5px;
 	}
-
-	.leftNotch{
-		left: -3px;
-	}
-	.leftNotch:after{
-		left: 5px;
-	}
-	
-	
-	.rightNotch {
-		
-	}	
-	.rightNotch:after {
-		right: 5px;
-	}
-	
 	
   </ui:style>
   
-    <g:Label ui:field="tipText" addStyleNames="{style.panel}" />
+    <g:Label ui:field="tipText" />
 
 </ui:UiBinder> 

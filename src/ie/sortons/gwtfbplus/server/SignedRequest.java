@@ -1,9 +1,6 @@
 package ie.sortons.gwtfbplus.server;
 
 
-
-import lombok.Getter;
-
 import org.apache.commons.codec.binary.Base64;
 
 import com.google.gson.Gson;
@@ -38,9 +35,41 @@ import com.google.gson.GsonBuilder;
 */
 
 
-@Getter
+
 public class SignedRequest {
 	
+	public String getAlgorithm() {
+		return algorithm;
+	}
+
+	public String getApp_data() {
+		return app_data;
+	}
+
+	public String getExpires() {
+		return expires;
+	}
+
+	public String getIssued_at() {
+		return issued_at;
+	}
+
+	public String getOauth_token() {
+		return oauth_token;
+	}
+
+	public SRPage getPage() {
+		return page;
+	}
+
+	public SRUser getUser() {
+		return user;
+	}
+
+	public String getUser_id() {
+		return user_id;
+	}
+
 	public SignedRequest () {}
 
 	private String algorithm;
@@ -58,10 +87,22 @@ public class SignedRequest {
 		return gson.toJson(this);
 	}
 	
-	@Getter
+
     public static class SRPage {
         
-    	private String id;
+    	public String getId() {
+			return id;
+		}
+
+		public boolean isLiked() {
+			return liked;
+		}
+
+		public boolean isAdmin() {
+			return admin;
+		}
+
+		private String id;
     	private boolean liked;
     	private boolean admin;
     	
@@ -71,8 +112,25 @@ public class SignedRequest {
     	}
     }
     
-	@Getter
+	
     public static class SRUser {
+    	
+    	public String getCountry() {
+			return country;
+		}
+
+
+		public String getLocale() {
+			return locale;
+		}
+
+
+		public SRUserAge getAge() {
+			return age;
+		}
+
+
+		SRUser() {}
         
     	private String country;
     	private String locale;
@@ -83,10 +141,20 @@ public class SignedRequest {
     		return gson.toJson(this);
     	}
         
-    	@Getter
+    	
     	public static class SRUserAge {
             
-    		private String min;
+    		SRUserAge() {}
+    		
+    		public String getMin() {
+				return min;
+			}
+
+			public String getMax() {
+				return max;
+			}
+
+			private String min;
     		private String max;
         	
         	public String toJsonString(){

@@ -3,9 +3,6 @@ package ie.sortons.gwtfbplus.server.fql;
 
 import com.google.gson.Gson;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
 
 /**
  * 
@@ -21,8 +18,14 @@ import lombok.NoArgsConstructor;
  * @author brianhenry
  *
  */
-@Getter @NoArgsConstructor
+
 public class FqlEventMember {
+
+	public FqlEventMember.FqlEventMemberItem[] getData() {
+		return data;
+	}
+
+	public FqlEventMember() {}
 
 	private FqlEventMember.FqlEventMemberItem[] data; 
 
@@ -32,10 +35,34 @@ public class FqlEventMember {
 	}
 
 
-	
-	@Getter @NoArgsConstructor
 	public static class FqlEventMemberItem {
 	
+		public String getEid() {
+			return eid;
+		}
+
+		public String getInviter() {
+			return inviter;
+		}
+
+		public String getInviter_type() {
+			return inviter_type;
+		}
+
+		public String getRsvp_status() {
+			return rsvp_status;
+		}
+
+		public String getStart_time() {
+			return start_time;
+		}
+
+		public String getUid() {
+			return uid;
+		}
+
+		FqlEventMemberItem() {}
+		
 		private String eid;
 		private String inviter;
 		private String inviter_type;
