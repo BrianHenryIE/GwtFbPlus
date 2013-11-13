@@ -1,8 +1,16 @@
 package ie.sortons.gwtfbplus.server.fql;
 
 
-import com.google.gson.Gson;
-
+// TODO
+/**
+ * json = json.replace("\"venue\":[]", "\"venue\":{}");
+ * 
+ * is being used because when Facebook has no data to return, it 
+ * returns an empty array rather than an empty object. 
+ * 
+ * The correct solution to this is a GSON adapter, as done with
+ * FqlStream
+ */
 
 /**
 
@@ -19,30 +27,6 @@ http://developers.facebook.com/docs/reference/fql/event/
       "pic_square": "http://profile.ak.fbcdn.net/hprofile-ak-ash4/373192_314646171897576_693607468_n.jpg"
     }, 
 
-eid
-name
-pic_small
-pic_big
-pic_square
-pic
-host
-description
-start_time
-end_time
-creator
-update_time
-location
-venue
-privacy
-hide_guest_list
-can_invite_friends
-all_members_count
-attending_count
-unsure_count
-declined_count
-not_replied_count
-
-
  */
 
 
@@ -56,139 +40,96 @@ public class FqlEvent {
 
 	private FqlEvent.FqlEventItem[] data; 
 
-	public String toString(){
-		Gson gson = new Gson();
-		return gson.toJson(this);
-	}
-
-
+	
 	public static class FqlEventItem {
 
 		public String getEid() {
 			return eid;
 		}
 
-
-
 		public String getName() {
 			return name;
 		}
-
-
 
 		public String getPic_small() {
 			return pic_small;
 		}
 
-
-
 		public String getPic_big() {
 			return pic_big;
 		}
-
-
 
 		public String getPic_square() {
 			return pic_square;
 		}
 
-
-
 		public String getPic() {
 			return pic;
 		}
-
-
 
 		public String getHost() {
 			return host;
 		}
 
-
-
 		public String getDescription() {
 			return description;
 		}
-
-
 
 		public String getStart_time() {
 			return start_time;
 		}
 
-
-
 		public String getEnd_time() {
 			return end_time;
 		}
-
-
 
 		public String getCreator() {
 			return creator;
 		}
 
-
-
 		public String getUpdate_time() {
 			return update_time;
 		}
-
-
 
 		public String getLocation() {
 			return location;
 		}
 
-
+		public FqlEvent.FqlEventVenue getVenue() {
+			return venue;
+		}
 
 		public String getPrivacy() {
 			return privacy;
 		}
 
-
-
 		public String getHide_guest_list() {
 			return hide_guest_list;
 		}
-
-
 
 		public String getCan_invite_friends() {
 			return can_invite_friends;
 		}
 
-
-
 		public String getAll_members_count() {
 			return all_members_count;
 		}
-
-
 
 		public String getAttending_count() {
 			return attending_count;
 		}
 
-
-
 		public String getUnsure_count() {
 			return unsure_count;
 		}
-
-
 
 		public String getDeclined_count() {
 			return declined_count;
 		}
 
-
-
 		public String getNot_replied_count() {
 			return not_replied_count;
 		}
-
-
 
 		public FqlEventItem() {}
 
@@ -205,7 +146,9 @@ public class FqlEvent {
 		private String creator;
 		private String update_time;
 		private String location;
-		// private String venue;
+		
+		private FqlEventVenue venue;
+		
 		private String privacy;
 		private String hide_guest_list;
 		private String can_invite_friends;
@@ -215,16 +158,95 @@ public class FqlEvent {
 		private String declined_count;
 		private String not_replied_count;
 
-
-
-		//TODO
-		//Do a date convert in here.
-
-		public String toString(){
-			Gson gson = new Gson();
-			return gson.toJson(this);
-		}
 	}
 
+	
+	public static class FqlEventVenue {
+		
+		public FqlEventVenue() {}
+		
+		
+		/**
+		 * @return Street of the location
+		 */
+		public String getStreet() {
+			return street;
+		}
+
+		/**
+		 * @return City of the location
+		 */
+		public String getCity() {
+			return city;
+		}
+
+		/**
+		 * @return State of the location
+		 */
+		public String getState() {
+			return state;
+		}
+
+		/**
+		 * @return Country of the location
+		 */
+		public String getCountry() {
+			return country;
+		}
+
+		/**
+		 * @return Zip code of the location
+		 */
+		public String getZip() {
+			return zip;
+		}
+
+		/**
+		 * @return Latitude of the location
+		 */
+		public Double getLatitude() {
+			return latitude;
+		}
+
+		/**
+		 * @return Longitude of the location
+		 */
+		public Double getLongitude() {
+			return longitude;
+		}
+
+		/**
+		 * @return ID of the location
+		 */
+		public String getId() {
+			return id;
+		}
+
+		/**
+		 * @return Name of the location
+		 */
+		public String getName() {
+			return name;
+		}
+
+		/**
+		 * @return ID of the parent location of this location
+		 */
+		public String getLocated_in() {
+			return located_in;
+		}
+
+		private String street;
+		private String city;
+		private String state;
+		private String country;
+		private String zip;
+		private Double latitude;
+		private Double longitude;
+		private String id;
+		private String name;
+		private String located_in;
+	
+	}
 
 }

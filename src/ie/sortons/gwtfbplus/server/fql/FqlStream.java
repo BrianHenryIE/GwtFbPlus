@@ -43,11 +43,6 @@ public class FqlStream {
 
 	private FqlStreamItem[] data; 
 
-	public String toString(){
-		Gson gson = new Gson();
-		return gson.toJson(this);
-	}
-
 
 	public static class FqlStreamItem {
 		/*	
@@ -71,17 +66,23 @@ public class FqlStream {
 		 */
 		FqlStreamItem() {}
 
-		public String getPost_id() {
+
+		public String getSourceId() {
+			return source_id;
+		}
+
+
+		public String getPostId() {
 			return post_id;
 		}
 
 
-		public String getActor_id() {
+		public String getActorId() {
 			return actor_id;
 		}
 
 
-		public String getTarget_id() {
+		public String getTargetId() {
 			return target_id;
 		}
 
@@ -95,7 +96,7 @@ public class FqlStream {
 			return attachment;
 		}
 
-
+		private String source_id;
 		private String post_id;
 		private String actor_id;
 		private String target_id;
@@ -188,7 +189,7 @@ public class FqlStream {
 		}
 
 		FqlStreamItemAttachmentMediaItem() {}
-		
+
 		private String href;
 		private String alt;
 		private String type;
@@ -203,7 +204,7 @@ public class FqlStream {
 	}
 
 
-	
+
 	public static class FqlStreamItemAttachmentMediaItemPhoto {
 
 		public String getAid() {
@@ -239,7 +240,7 @@ public class FqlStream {
 		}
 
 		FqlStreamItemAttachmentMediaItemPhoto() {}
-		
+
 		private String aid;
 		private String pid;
 		private String fbid;
@@ -254,7 +255,7 @@ public class FqlStream {
 
 
 
-	
+
 	public static class FqlStreamItemAttachmentMediaItemPhotoImage {
 
 		public String getSrc() {
@@ -267,7 +268,7 @@ public class FqlStream {
 			return height;
 		}
 		FqlStreamItemAttachmentMediaItemPhotoImage() {}
-		
+
 		private String src;
 		private String width;
 		private String height;

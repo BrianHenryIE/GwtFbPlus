@@ -1,13 +1,12 @@
 package ie.sortons.gwtfbplus.client.widgets.popups;
 
-import ie.sortons.gwtfbplus.client.api.Canvas;
-
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.Widget;
@@ -71,8 +70,18 @@ public class ToolTipPopup extends PopupPanel {
 		Timer t = new Timer() {
 			@Override
 			public void run() {
-				if(tipText.getAbsoluteLeft() < target.getAbsoluteLeft()){ // windowWidth/2){
+				// doesn't calculate until it has been displayed
+				System.out.println("tipText.getAbsoluteLeft() : " + tipText.getAbsoluteLeft());
+				System.out.println("target.getAbsoluteLeft() : " + target.getAbsoluteLeft());
+				System.out.println("Window.getClientWidth() : " + Window.getClientWidth());
+				System.out.println("tipText.getOffsetWidth() : " + tipText.getOffsetWidth());
+				
+				if(tipText.getAbsoluteLeft() + tipText.getOffsetWidth() > Window.getClientWidth()){ // or windowWidth/2){
+					
+					tipText.removeStyleName(style.leftNotch());
 					tipText.addStyleName(style.rightNotch());
+					tipText.getElement().getStyle().setLeft(-tipText.getOffsetWidth()+target.getOffsetWidth(), Unit.PX);
+					
 				}else{
 					tipText.addStyleName(style.leftNotch());
 				}

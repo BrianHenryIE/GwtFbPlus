@@ -11,7 +11,6 @@ public class LoginResponse extends JavaScriptObject {
 	 * getStatus() get the current status of the userKey.
 	 * 
 	 * From http://developers.facebook.com/docs/reference/javascript/FB.login/
-	 * > On Canvas, if the user is 'unknown' (that is, when the login status == 'unknown'), do not use the JS SDK to sign in the user, instead do a full redirect of the page to the oauth dialog so that we get a consistent state.
 	 * 
 	 * @return one of 
 	 * "unknown" - The userKey is not logged into facebook.

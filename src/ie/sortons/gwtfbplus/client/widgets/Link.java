@@ -12,6 +12,13 @@ public class Link extends SimplePanel {
 		setHref(href);
 		this.add(widget);
 	}
+	
+	public Link(String href, Widget widget, String target) {
+		super(DOM.createAnchor());
+		setHref(href);
+		this.add(widget);
+		setTarget(target);
+	}
 
 	public void setHref(String href) {
 		getElement().setAttribute("href", href);

@@ -37,7 +37,7 @@ public class Permissions extends JavaScriptObject {
   	public final native boolean hasRead_requests() /*-{ return (this.read_requests==1); }-*/;
   	public final native boolean hasManage_notifications() /*-{ return (this.manage_notifications==1); }-*/; 
   	public final native boolean hasManage_pages() /*-{ return (this.manage_pages==1); }-*/;
-  	public final native Boolean hasUser_birthday() /*-{ return (this.user_birthday==1); }-*/;
+  	public final native boolean hasUser_birthday() /*-{ return (this.user_birthday==1); }-*/;
   	public final native boolean hasUser_religion_politics() /*-{ return (this.user_religion_politics==1); }-*/;
   	public final native boolean hasUser_relationships() /*-{ return (this.user_relationships==1); }-*/;
   	public final native boolean hasUser_relationship_details() /*-{ return (this.user_relationship_details==1); }-*/; 
@@ -92,13 +92,15 @@ public class Permissions extends JavaScriptObject {
     	   
   	public final native boolean hasBookmarked() /*-{ return (this.bookmarked==1); }-*/;
   	
-  	public final Set<String> list() {
+  	public final Set<String> getPermissionsList() {
   		JSONObject jo = new JSONObject(this);
 
   		Set<String> list = jo.keySet();
   		
   		// TODO:
-  		// remove installed and bookmarked
+  		// remove installed and bookmarked ?
+  		
+  		// remove data and paging?
   		/*
   		for(String li : list){
   			if((li.equals("installed"))||(li.equals("bookmarked"))){
@@ -115,6 +117,9 @@ public class Permissions extends JavaScriptObject {
 	// TODO
 	// There's got to be a better way than this JSONObject approach.
   	public final boolean hasPermission(String permission) {
+  		if( permission == null || permission == "" ){
+  			return true;
+  		}
   		// If it has the key we're looking for, check that it's "1"
   		JSONObject jo = new JSONObject(this);
   		return (jo.containsKey(permission) ? ( (jo.get(permission).toString().equals("1")) ? true : false) : false );

@@ -123,5 +123,6 @@ I can't remember what the issue was, now, but rather than localhost or 127.0.0.1
 
 So, your Site URL and Canvas URL will be `http://testbed.org.org:8888/?gwt.codesvr=127.0.0.1:9997`. You'll have `https://testbed.org.org:8888/?gwt.codesvr=127.0.0.1:9997` as the Secure Canvas URL but dev mode doesn't do https, so you'll be [disabling secure browsing on Facebook](https://www.facebook.com/settings?tab=security) and will have to remember to test everything works.
 
-  
-  
+<dt>Run Configurations</dt>
+
+Add "-startupUrl /" (no quotes) to the Arguments in your app's Run Configuration. It's not important, but if you don't, you'll get a warning every time you start dev mode, and if you do, it will print out the URL from the previous section so you can double click it. 
