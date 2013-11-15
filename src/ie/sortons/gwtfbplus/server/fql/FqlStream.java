@@ -1,7 +1,6 @@
 package ie.sortons.gwtfbplus.server.fql;
 
 
-
 import java.lang.reflect.Type;
 
 import com.google.gson.Gson;
@@ -29,11 +28,24 @@ import com.google.gson.JsonParseException;
             ]
          }
       }, 
+      
+      
+      or
+      
+      
+      
+      {
+    "error": {
+        "message": "An unexpected error has occurred. Please retry your request later.",
+        "type": "OAuthException",
+        "code": 2
+    }
+}
  */
 
 
 
-public class FqlStream {
+public class FqlStream extends Fql {
 
 	public FqlStreamItem[] getData() {
 		return data;
@@ -103,12 +115,6 @@ public class FqlStream {
 		private String message;
 
 		private FqlStreamItemAttachment attachment;
-
-
-		public String toString(){
-			Gson gson = new Gson();
-			return gson.toJson(this);
-		}
 
 	}
 

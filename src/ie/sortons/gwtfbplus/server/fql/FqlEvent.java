@@ -30,7 +30,7 @@ http://developers.facebook.com/docs/reference/fql/event/
  */
 
 
-public class FqlEvent {
+public class FqlEvent extends Fql {
 
 	public FqlEvent.FqlEventItem[] getData() {
 		return data;

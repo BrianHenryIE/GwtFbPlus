@@ -11,7 +11,7 @@ http://developers.facebook.com/docs/reference/fql/page/
 
 
 
-public class FqlPage {
+public class FqlPage extends Fql {
 
 	public FqlPage() {}
 

@@ -71,12 +71,8 @@ public class ToolTipPopup extends PopupPanel {
 			@Override
 			public void run() {
 				// doesn't calculate until it has been displayed
-				System.out.println("tipText.getAbsoluteLeft() : " + tipText.getAbsoluteLeft());
-				System.out.println("target.getAbsoluteLeft() : " + target.getAbsoluteLeft());
-				System.out.println("Window.getClientWidth() : " + Window.getClientWidth());
-				System.out.println("tipText.getOffsetWidth() : " + tipText.getOffsetWidth());
 				
-				if(tipText.getAbsoluteLeft() + tipText.getOffsetWidth() > Window.getClientWidth()){ // or windowWidth/2){
+				if(target.getAbsoluteLeft()+ tipText.getOffsetWidth() > Window.getClientWidth()){ // or windowWidth/2){
 					
 					tipText.removeStyleName(style.leftNotch());
 					tipText.addStyleName(style.rightNotch());
