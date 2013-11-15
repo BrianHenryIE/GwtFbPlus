@@ -19,7 +19,7 @@ import com.google.gson.Gson;
  *
  */
 
-public class FqlEventMember {
+public class FqlEventMember extends Fql {
 
 	public FqlEventMember.FqlEventMemberItem[] getData() {
 		return data;
