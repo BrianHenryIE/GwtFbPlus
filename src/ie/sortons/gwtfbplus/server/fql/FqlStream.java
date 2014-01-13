@@ -104,6 +104,15 @@ public class FqlStream extends Fql {
 		}
 
 
+		public String getPermalink() {
+			return permalink;
+		}
+
+		public int getCreatedTime() {
+			return Integer.parseInt(created_time);
+		}
+
+
 		public FqlStreamItemAttachment getAttachment() {
 			return attachment;
 		}
@@ -114,6 +123,10 @@ public class FqlStream extends Fql {
 		private String target_id;
 		private String message;
 
+		private String permalink;
+
+		private String created_time;
+		
 		private FqlStreamItemAttachment attachment;
 
 	}

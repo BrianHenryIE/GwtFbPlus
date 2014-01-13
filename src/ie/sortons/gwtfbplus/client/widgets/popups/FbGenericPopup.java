@@ -1,7 +1,6 @@
 package ie.sortons.gwtfbplus.client.widgets.popups;
 
 
-import ie.sortons.gwtfbplus.client.widgets.buttons.BlueButton;
 import ie.sortons.gwtfbplus.client.widgets.buttons.GreyButton;
 
 import com.google.gwt.core.client.GWT;
@@ -54,7 +53,7 @@ public class FbGenericPopup extends PopupPanel {
 	@UiField TextArea input;
 	@UiField SimplePanel addWidget;
 	
-	@UiField BlueButton okButton;
+	@UiField GreyButton okButton; // TODO SHould be blue
 	@UiField GreyButton cancelButton;
 	
 	public FbGenericPopup() {

@@ -1,27 +1,12 @@
 package ie.sortons.gwtfbplus.client.widgets.buttons;
 
-import com.google.gwt.core.client.GWT;
+import com.google.gwt.uibinder.client.UiConstructor;
 
-public class GreenButton extends CanDisableButton {
-	
-	interface Resources extends SoButtonBase.TextButtonResources {
-		
-		interface Style extends TextButtonStyle { }
-		
-		@Source("greenbutton.css")
-		Style style();
-		
-		Resources INSTANCE = GWT.create(Resources.class);
-	}
-	
-	public GreenButton() {
-		super(Resources.INSTANCE);
-	}
-	
+public class GreenButton extends FbButton {
+
+	@UiConstructor
 	public GreenButton(String text) {
-		this();
-		setText(text);
+		super(text);
+		this.setStylePrimaryName("Green-Button");
 	}
 }
-
-

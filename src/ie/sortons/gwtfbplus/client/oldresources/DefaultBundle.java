@@ -11,12 +11,6 @@ public interface DefaultBundle extends ClientBundle {
 	@Source("default.css")
 	Style css();
 
-	@Source("Sortonsbottomofpage.jpg")
-	ImageResource footer();
-	
-	@Source("sortons180.png")
-	ImageResource sortons();
-
 	@Source("xable.png")
 	ImageResource xableImages();
 

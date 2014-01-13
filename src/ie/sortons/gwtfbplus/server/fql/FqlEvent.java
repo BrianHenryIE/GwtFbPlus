@@ -1,5 +1,9 @@
 package ie.sortons.gwtfbplus.server.fql;
 
+import com.google.gwt.core.client.GWT;
+import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
+import com.kfuntak.gwt.json.serialization.client.Serializer;
+
 
 // TODO
 /**
@@ -40,8 +44,7 @@ public class FqlEvent extends Fql {
 
 	private FqlEvent.FqlEventItem[] data; 
 
-	
-	public static class FqlEventItem {
+	public static class FqlEventItem implements JsonSerializable, Comparable<FqlEventItem> {
 
 		public String getEid() {
 			return eid;
@@ -157,6 +160,36 @@ public class FqlEvent extends Fql {
 		private String unsure_count;
 		private String declined_count;
 		private String not_replied_count;
+		
+
+		@Override
+		public int compareTo(FqlEventItem other) {
+			return this.eid.compareTo(other.getEid());
+		}
+
+		@Override
+		public final boolean equals(Object obj) {
+			if (obj == this)
+				return true;
+			if (!(obj instanceof FqlEventItem))
+				return false;
+			return compareTo((FqlEventItem) obj) == 0;
+		}
+
+		@Override
+		public final int hashCode() {
+			return eid.hashCode();
+		}
+		
+		public static FqlEventItem fromJson(String json) {
+		        Serializer serializer = (Serializer) GWT.create(Serializer.class);
+		        return (FqlEventItem)serializer.deSerialize(json,"ie.sortons.gwtfbplus.server.fql.FqlEventItem");
+		}
+		 
+		public String toJson() {
+		        Serializer serializer = (Serializer) GWT.create(Serializer.class);
+		        return serializer.serialize(this);
+		}
 
 	}
 
@@ -248,5 +281,6 @@ public class FqlEvent extends Fql {
 		private String located_in;
 	
 	}
+
 
 }

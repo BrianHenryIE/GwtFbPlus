@@ -1,7 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
   xmlns:g="urn:import:com.google.gwt.user.client.ui"
-  xmlns:rs="urn:import:ie.sortons.gwtfbplus.client.widgets.buttons">
+  xmlns:fb="urn:import:ie.sortons.gwtfbplus.client.widgets.buttons">
   <ui:style type="ie.sortons.gwtfbplus.client.widgets.popups.FatalErrorPopup.Styles">
   	.popup {
 		border: 1px solid #d34d2b;
@@ -56,9 +56,9 @@
       
         <g:HTML ui:field="errorDetail"></g:HTML>
         
-        <rs:BlueButton ui:field="okButton" >Reload</rs:BlueButton>
-        <rs:GreyButton ui:field="traceButton" >Stack Trace</rs:GreyButton>
-        <rs:GreyButton ui:field="supportButton" >Support</rs:GreyButton>
+        <fb:GreyButton ui:field="okButton" >Reload</fb:GreyButton>
+        <fb:GreyButton ui:field="traceButton" >Stack Trace</fb:GreyButton>
+        <fb:GreyButton ui:field="supportButton" >Support</fb:GreyButton>
         
       </g:FlowPanel>
     </g:HTMLPanel>

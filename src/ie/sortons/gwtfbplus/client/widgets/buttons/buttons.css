@@ -1,0 +1,89 @@
+@external .Grey-Button, .Grey-Button-up, .Grey-Button-up-hovering, .Grey-Button-down, .Grey-Button-down-hovering, .Grey-Button-up-disabled, .Grey-Button-down-disabled;
+@external .Blue-Button, .Blue-Button-up, .Blue-Button-up-hovering, .Blue-Button-down, .Blue-Button-down-hovering, .Blue-Button-up-disabled, .Blue-Button-down-disabled;
+@external .Green-Button, .Green-Button-up, .Green-Button-up-hovering, .Green-Button-down, .Green-Button-down-hovering, .Green-Button-up-disabled, .Green-Button-down-disabled;
+
+@url greybuttonbackground greyButtonBackgroundImage;
+@url bluebuttonbackground blueButtonBackgroundImage;
+@url greenbuttonbackground greenButtonBackgroundImage;
+
+.Grey-Button, .Blue-Button, .Green-Button {
+	font-weight: bold;
+	font-size: 11px;
+	border-style: solid;
+	border-width: 1px;
+	line-height: 14px;
+	padding: 3px 6px;
+	cursor: pointer;
+	display: inline-block;
+}
+	
+.Grey-Button {
+	color: #333333;
+}
+
+.Blue-Button, .Green-Button {
+	color: #FFFFFF;
+}
+
+.Grey-Button:focus, .Blue-Button:focus, .Green-Button:focus {
+	outline: none;
+}
+
+.Grey-Button-up, .Grey-Button-up-hovering {
+	background-color: #EEEEEE;
+	background-image: greybuttonbackground;
+	background-repeat: x;
+	border-color: #999999 #999999 #888888;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Blue-Button-up, .Blue-Button-up-hovering {
+	background-color: #5B74A8;
+	background-image: bluebuttonbackground;
+	background-repeat: x;
+	border-color: #29447E #29447E #1A356E;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Green-Button-up, .Green-Button-up-hovering {
+	background-color: #69A74E;
+	background-image: greenbuttonbackground;
+	background-repeat: x;
+	border-color: #3B6E22 #3B6E22 #2C5115;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Grey-Button-down, .Grey-Button-down-hovering {
+	background-color: #DDDDDD;
+	border-color: #999999;
+	background-image: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.Blue-Button-down, .Blue-Button-down-hovering {
+	background-color: #4F6AA3;
+	border-color: #29447E;
+	background-image: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.Green-Button-down, .Green-Button-down-hovering {
+	background-color: #609946;
+	border-color: #3B6E22;
+	background-image: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.Grey-Button-up-disabled, .Grey-Button-down-disabled {
+	background-color: #F2F2F2;
+    border-color: #C8C8C8;
+    cursor: default;
+    box-shadow: none;
+}
+
+.Blue-Button-up-disabled, .Blue-Button-down-disabled {
+	background-color: #ADBAD4;
+    border-color: #94A2BF;
+    cursor: default;
+    box-shadow: none;
+}
