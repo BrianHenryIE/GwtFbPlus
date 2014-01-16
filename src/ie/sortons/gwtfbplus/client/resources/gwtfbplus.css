@@ -8,3 +8,10 @@
 	width: 12px;
 	position: relative;
 }
+
+.infoLabel {
+	padding:10px;
+	background-color: #fff9d7;
+	border: 1px solid #e2c822;
+	color: #333;
+}

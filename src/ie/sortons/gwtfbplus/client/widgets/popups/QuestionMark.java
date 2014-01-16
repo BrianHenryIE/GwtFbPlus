@@ -12,7 +12,7 @@ public class QuestionMark extends Label {
 	ToolTipPanel popup = new ToolTipPanel("", this);
 
 	public QuestionMark() {
-		super(); // Call Label's constructor.
+		super();
 		this.setStyleName(res.css().helpMark());
 	}
 

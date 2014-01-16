@@ -14,6 +14,11 @@ public interface Resources extends ClientBundle {
 	interface Style extends CssResource { 
 		String leftNotch();
 		String rightNotch();
+		
+		String clickHeading();
+		String clickBody();
+		String clickContent();
+		String clickButtons();
 	}
 
 }

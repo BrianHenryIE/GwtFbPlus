@@ -22,6 +22,7 @@ public interface GwtFbPlusResources extends ClientBundle {
 	
 	public interface Style extends CssResource {
 		String helpMark();
+		String infoLabel();
 	}
 
 	@Source("mappushpin.png")

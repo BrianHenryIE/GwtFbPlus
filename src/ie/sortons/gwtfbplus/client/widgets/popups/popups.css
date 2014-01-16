@@ -1,4 +1,4 @@
-@External .ToolTip, .popupContent;
+@External .ToolTip, .Click, .Click-Glass, .popupContent;
 .ToolTip {
 	border: 0;
 	overflow: hidden;
@@ -14,7 +14,61 @@
 	/* max-width: 260px; */
 }
 
-.rightNotch:after,.rightNotch:before,.leftNotch:after,.leftNotch:before {
+.Click {
+	
+}
+
+.Click .popupContent {
+	background: rgba(82, 82, 82, 0.7);
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 10px;
+	width: 445px;
+}
+
+.clickHeading {
+	background: #6d84b4;
+	border: 1px solid #3b5998;
+	border-bottom: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 10px;
+	display: block;
+}
+
+.clickBody {
+	background: #f2f2f2;
+	border: 1px solid #555;
+	border-top-width: 0;
+	border-bottom-width: 0;
+}
+
+.clickContent {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	background-color: #FFF;
+}
+
+.clickButtons {
+	text-align: right;
+	padding: 8px 10px 8px 10px;
+	border: 1px solid #555;
+	border-top-width: 0;
+	background-color: #f2f2f2;
+}
+
+.Click-Glass {
+	background-color: transparent; /* White glass */
+	opacity: 0.6;
+	filter: alpha(opacity =       60);
+}
+
+.rightNotch:after,.rightNotch:before,.leftNotch:after,.leftNotch:before
+	{
 	border: solid transparent;
 	content: ' ';
 	height: 0;
