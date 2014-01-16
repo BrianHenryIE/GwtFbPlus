@@ -8,41 +8,39 @@ import com.google.gwt.user.client.ui.FocusPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
- * Provides a container to handle mouseover events to show and hide
- * popup information 
+ * Provides a container to handle mouseover events to show and hide popup information
  * 
  * @author brianhenry
- *
+ * 
  */
 public class ToolTipPanel extends FocusPanel {
 
-	private ToolTipPopup thePopup;
+	private ToolTipPopup toolTipPopup;
 
 	public ToolTipPanel(final String tipText, final Widget widget) {
 
 		// Puts the other widget inside this one.
 		this.add(widget);
-		thePopup = new ToolTipPopup(tipText, widget);
+		// Gives the popup the text it should display and the widget it should position itself beside
+		toolTipPopup = new ToolTipPopup(tipText, widget);
 
-		this.addMouseOverHandler(new MouseOverHandler(){
+		this.addMouseOverHandler(new MouseOverHandler() {
 			@Override
 			public void onMouseOver(MouseOverEvent event) {
-				thePopup.show();
-				thePopup.showRelativeTo(widget);
+				toolTipPopup.show();
 			}
 		});
 
-		this.addMouseOutHandler(new MouseOutHandler(){
+		this.addMouseOutHandler(new MouseOutHandler() {
 			@Override
 			public void onMouseOut(MouseOutEvent event) {
-				thePopup.hide();
+				toolTipPopup.hide();
 			}
-		}); 	
+		});
 	}
 
-	public ToolTipPopup getPopUp(){
-		return thePopup;
+	public ToolTipPopup getPopUp() {
+		return toolTipPopup;
 	}
-
 
 }

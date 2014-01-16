@@ -12,17 +12,14 @@ Feedback on my code would be appreciated. My email address is brian.henry@sorton
 Quickstart
 ----------
 
-Download [gwtfb.jar](http://www.sortons.ie/gwt/gwtfb.jar) and [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add them to your build path and add to your .gwt.xml file:
+Download [gwtfb.jar](http://www.sortons.ie/gwt/gwtfb.jar) a [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add them to your build path and add to your .gwt.xml file:
 
     <inherits name='com.gwtfb.GwtFB'/>
     <inherits name='ie.sortons.gwtfbplus.GwtFBplus'/>
+    
 
 Dependencies
 ------------
-
-[Project Lombok](http://projectlombok.org/)  (v0.11.4)
-is a tool for making getters and setters with annotations (amongst other features, but 
-that's all it's being used for here). 
 
 [Apache Commons Codec](http://commons.apache.org/proper/commons-codec/) (v1.5)
 is used for the base 64 decoding of the Facebook signed request. There is a method in the 
@@ -30,6 +27,9 @@ Java Standard library that does this, but it wasn't behaving.
 
 [google-gson](https://code.google.com/p/google-gson/) (v2.2.4)
 is Google's library for dealing with json server side.
+
+[GwtProJsonSerializer](http://www.sortons.ie/gwt/gwtprojsonserializer-1.0.6.jar)
+for client side json serialization and deserialization. Also add <inherits name='com.kfuntak.gwt.json.serialization.GWTProJsonSerializer' /> to your .gwt.xml file?
 
 Using the library
 -----------------
@@ -46,9 +46,10 @@ Make a class called LandingPage.java in your server package that extends Landing
     public class LandingPage extends LandingPageServlet 
     {
 	    private final static String ENTRYPOINT = "gwt__examples/gwt__examples.nocache.js";
+	    private final static String APPID = "0123456789";
 	
 	    public LandingPage() {
-		    super(ENTRYPOINT);
+		    super(ENTRYPOINT, APPID);
 	    }
     }
 

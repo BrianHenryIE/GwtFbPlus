@@ -1,5 +1,6 @@
 package ie.sortons.gwtfbplus.client.widgets;
 
+import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
@@ -11,6 +12,7 @@ public class Link extends SimplePanel {
 		super(DOM.createAnchor());
 		setHref(href);
 		this.add(widget);
+		this.getElement().getStyle().setDisplay(Display.INLINE_BLOCK);
 	}
 	
 	public Link(String href, Widget widget, String target) {
@@ -18,6 +20,7 @@ public class Link extends SimplePanel {
 		setHref(href);
 		this.add(widget);
 		setTarget(target);
+		this.getElement().getStyle().setDisplay(Display.INLINE_BLOCK);
 	}
 
 	public void setHref(String href) {

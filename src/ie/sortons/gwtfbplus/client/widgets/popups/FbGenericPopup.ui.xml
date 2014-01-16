@@ -160,7 +160,7 @@
 	  		</g:HTMLPanel>
 		 	
 		 	<g:HTMLPanel ui:field="footer" addStyleNames="{style.footer}">
-			    <fb:GreyButton ui:field="okButton" addStyleNames="{style.buttons}">Yes</fb:GreyButton>
+			    <fb:BlueButton ui:field="okButton" addStyleNames="{style.buttons}">Yes</fb:GreyButton>
 			    <fb:GreyButton ui:field="cancelButton" addStyleNames="{style.buttons} {style.cancelButton}">No</fb:GreyButton>
 		    </g:HTMLPanel>
 		    

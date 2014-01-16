@@ -14,7 +14,7 @@ import com.gwtfb.sdk.FBCore;
  * @author Brian Henry
  * @see https://developers.facebook.com/docs/reference/javascript/FB.ui/
  */
-public class FBUi {
+public class FbUi {
 
 	private static FBCore fbCore = GWT.create(FBCore.class);
 	

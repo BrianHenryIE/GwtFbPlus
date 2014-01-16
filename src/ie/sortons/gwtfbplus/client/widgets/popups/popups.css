@@ -1,0 +1,36 @@
+@External .ToolTip, .popupContent;
+.ToolTip {
+	border: 0;
+	overflow: hidden;
+}
+
+.ToolTip .popupContent {
+	color: #FFFFFF;
+	font-size: 11px;
+	background-color: #282828;
+	padding: 4px 8px;
+	whiteSpace: nowrap;
+
+	/* max-width: 260px; */
+}
+
+.rightNotch:after,.rightNotch:before,.leftNotch:after,.leftNotch:before {
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	top: 100%;
+	position: absolute;
+	width: 0;
+}
+
+.leftNotch:after {
+	border-width: 4px;
+	border-top-color: #282828;
+	left: 5px;
+}
+
+.rightNotch:after {
+	border-width: 4px;
+	border-top-color: #282828;
+	right: 5px;
+}

@@ -87,3 +87,5 @@
     cursor: default;
     box-shadow: none;
 }
+
+.Green-Button-up-disabled, .Green-Button-down-disabled { }

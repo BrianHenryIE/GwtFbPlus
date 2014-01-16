@@ -16,20 +16,6 @@ button{margin:0}
 a:hover{text-decoration:underline}
 img{border:0}
 hr{background:#d9d9d9;border-width:0;color:#d9d9d9;height:1px}
-.center{margin-left:auto;margin-right:auto}
 input{border: 1px solid #BDC7D8; padding: 4px;}
 table{word-wrap:normal}
 
-@url blueBackground blueButtonBackgroundPixel;
-
-.blueButton {
-	color: #FFFFFF;
-	background-color: #5B74A8;
-    background-image: blueBackground;
-    background-repeat: repeat-x;
-    border-color: #29447E #29447E #1A356E;
-    
-    
-    font-size: 11px;
-    font-weight: 700;
-}

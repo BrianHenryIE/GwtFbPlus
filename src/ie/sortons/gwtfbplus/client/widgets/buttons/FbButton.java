@@ -10,7 +10,7 @@ import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.user.client.ui.CustomButton;
 
-public class FbButton extends CustomButton {
+abstract class FbButton extends CustomButton {
 
 	Resources resources = Resources.INSTANCE;
 

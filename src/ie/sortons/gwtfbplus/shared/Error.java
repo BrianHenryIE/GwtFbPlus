@@ -1,4 +1,4 @@
-package ie.sortons.gwtfbplus.server.fql;
+package ie.sortons.gwtfbplus.shared;
 
 /**
  * @author brianhenry
