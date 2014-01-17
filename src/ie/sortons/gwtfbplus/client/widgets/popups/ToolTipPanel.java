@@ -8,7 +8,7 @@ import com.google.gwt.user.client.ui.FocusPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
- * Provides a container to handle mouseover events to show and hide popup information
+ * Provides a container to handle mouseover events to show and hide ToolTipPopup information
  * 
  * @author brianhenry
  * 

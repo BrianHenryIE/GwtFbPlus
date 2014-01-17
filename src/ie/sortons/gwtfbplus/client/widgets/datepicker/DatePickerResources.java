@@ -1,23 +1,23 @@
 package ie.sortons.gwtfbplus.client.widgets.datepicker;
 
 
-import ie.sortons.gwtfbplus.client.widgets.datepicker.DayPickerSmallResources;
-
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.DataResource;
 
-public interface DayPickerSmallResources extends ClientBundle {
+public interface DatePickerResources extends ClientBundle {
 
-	public static DayPickerSmallResources INSTANCE = GWT.create(DayPickerSmallResources.class); 
+	public static DatePickerResources INSTANCE = GWT.create(DatePickerResources.class); 
 
 	public interface Style extends CssResource {
 		public String fbStyleDatePicker();
 	}
 	
-	@Source("daypicker.css")
-	Style style();
+	@Source("datepicker.css")
+	Style css();
 	
-	
-	
+	@Source("calendaricon.png")
+	DataResource calendarIcon();
+
 }

@@ -3,10 +3,11 @@ package ie.sortons.gwtfbplus.client.widgets.popups;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.ImageResource;
 
-public interface Resources extends ClientBundle {
+public interface PopupResources extends ClientBundle {
 
-	public static final Resources INSTANCE = GWT.create(Resources.class);
+	public static final PopupResources INSTANCE = GWT.create(PopupResources.class);
 
 	@Source("popups.css")
 	Style css();
@@ -20,5 +21,9 @@ public interface Resources extends ClientBundle {
 		String clickContent();
 		String clickButtons();
 	}
+	
+
+	@Source("questionmark.png")
+	ImageResource questionMark();
 
 }

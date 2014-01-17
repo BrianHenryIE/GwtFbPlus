@@ -21,7 +21,7 @@ public interface GwtFbPlusResources extends ClientBundle {
 	}
 	
 	public interface Style extends CssResource {
-		String helpMark();
+		
 		String infoLabel();
 	}
 
@@ -37,6 +37,4 @@ public interface GwtFbPlusResources extends ClientBundle {
 	@Source("greenplus.png")
 	ImageResource greenPlus();
 
-	@Source("questionmark.png")
-	DataResource questionMark();
 }

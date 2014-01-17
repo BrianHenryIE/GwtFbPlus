@@ -12,7 +12,7 @@ import com.google.gwt.user.client.ui.SimplePanel;
 
 public class ClickPopup extends PopupPanel {
 
-	Resources resources = Resources.INSTANCE;
+	PopupResources resources = PopupResources.INSTANCE;
 
 	GreyButton cancelButton = new GreyButton("Cancel");
 	BlueButton okButton = new BlueButton("OK");
@@ -25,7 +25,6 @@ public class ClickPopup extends PopupPanel {
 
 	public ClickPopup(String title, SimplePanel content) {
 		
-		heading = new Label(title);
 		heading = new Label(title);
 		content.add(content);
 		
@@ -46,7 +45,7 @@ public class ClickPopup extends PopupPanel {
 		setGlassStyleName("Click-Glass");
 		setModal(true);
 		center();
-		Resources.INSTANCE.css().ensureInjected();
+		PopupResources.INSTANCE.css().ensureInjected();
 		
 		buttons.setStyleName(resources.css().clickButtons());
 		okButton.getElement().getStyle().setMarginLeft(10, Unit.PX);
