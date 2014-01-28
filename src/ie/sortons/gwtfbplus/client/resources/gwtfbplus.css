@@ -4,3 +4,13 @@
 	border: 1px solid #e2c822;
 	color: #333;
 }
+
+.errorLabel {
+	padding: 10px;
+	background-color: #ffebe8;
+	border: 1px solid #dd3c10;
+	color: #333333;
+	
+	font-size: 13px;
+	font-weight: bold;
+}

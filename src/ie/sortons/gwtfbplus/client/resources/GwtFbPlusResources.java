@@ -3,7 +3,6 @@ package ie.sortons.gwtfbplus.client.resources;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
-import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 
 public interface GwtFbPlusResources extends ClientBundle {
@@ -23,6 +22,7 @@ public interface GwtFbPlusResources extends ClientBundle {
 	public interface Style extends CssResource {
 		
 		String infoLabel();
+		String errorLabel();
 	}
 
 	@Source("mappushpin.png")

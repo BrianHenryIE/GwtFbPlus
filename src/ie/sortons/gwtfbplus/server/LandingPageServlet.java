@@ -1,6 +1,8 @@
 package ie.sortons.gwtfbplus.server;
 
 
+import ie.sortons.gwtfbplus.shared.domain.SignedRequest;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -8,6 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
 
 @SuppressWarnings("serial")
 public class LandingPageServlet extends HttpServlet {
@@ -28,6 +32,7 @@ public class LandingPageServlet extends HttpServlet {
 		this.appId = appId;
 	}
 	
+	private Gson gson = new Gson();
 	
 	// Inside Facebook, it will always be POST
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -36,11 +41,10 @@ public class LandingPageServlet extends HttpServlet {
 		SignedRequest signedRequest = SignedRequest.parseSignedRequest(request.getParameter("signed_request"));
 		
 		signedRequestData = "  <script id=\"signedRequest\">\n" +
-				"    var _sr_data = " + signedRequest.toJsonString() +
+				"    var _sr_data = " + gson.toJson(signedRequest) +
 				"\n  </script>\n\n";
 		
 		// This isn't needed/desirable outside the fb canvas
-		// TODO may be deprecated?
 		overflow = " style=\"overflow: hidden\"";
 		
 		// If the app has been added as a Page tab, it redirects to the canvas with a URL:
@@ -88,6 +92,7 @@ public class LandingPageServlet extends HttpServlet {
 				"<head> \n\n" +
 				"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> \n\n" +
 				signedRequestData + // If available, print the Signed Request 
+				"  <meta name=\"gwt:property\" content=\""+request.getLocale()+"\">\n\n" +
 				"  <script type=\"text/javascript\" language=\"javascript\" src=\"" + gwtEntryPoint + "\"></script> \n\n" + // Check the GWT cache and fetch the correct JS
 				"  <script src=\"//connect.facebook.net/en_US/all.js\"></script> \n\n" + // Facebook API
 				"</head> \n\n");

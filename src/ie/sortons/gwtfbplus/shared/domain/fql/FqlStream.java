@@ -1,4 +1,4 @@
-package ie.sortons.gwtfbplus.server.fql;
+package ie.sortons.gwtfbplus.shared.domain.fql;
 
 
 import java.lang.reflect.Type;
@@ -8,6 +8,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.google.gwt.core.shared.GwtIncompatible;
 
 
 /*
@@ -45,18 +46,10 @@ import com.google.gson.JsonParseException;
 
 
 
-public class FqlStream extends Fql {
-
-	public FqlStreamItem[] getData() {
-		return data;
-	}
+public class FqlStream {
 
 	FqlStream() {}
 
-	private FqlStreamItem[] data; 
-
-
-	public static class FqlStreamItem {
 		/*	
 
 	    	{
@@ -76,10 +69,8 @@ public class FqlStream extends Fql {
 	         }
 	    	}
 		 */
-		FqlStreamItem() {}
-
-
-		public String getSourceId() {
+		
+		public Long getSourceId() {
 			return source_id;
 		}
 
@@ -89,12 +80,12 @@ public class FqlStream extends Fql {
 		}
 
 
-		public String getActorId() {
+		public Long getActorId() {
 			return actor_id;
 		}
 
 
-		public String getTargetId() {
+		public Long getTargetId() {
 			return target_id;
 		}
 
@@ -108,8 +99,8 @@ public class FqlStream extends Fql {
 			return permalink;
 		}
 
-		public int getCreatedTime() {
-			return Integer.parseInt(created_time);
+		public Integer getCreatedTime() {
+			return created_time;
 		}
 
 
@@ -117,53 +108,55 @@ public class FqlStream extends Fql {
 			return attachment;
 		}
 
-		private String source_id;
-		private String post_id;
-		private String actor_id;
-		private String target_id;
+		
+		private Long actor_id;
 		private String message;
 
+		private String post_id;
+		private Long source_id;
+		
+		private Long target_id;
+		
 		private String permalink;
 
-		private String created_time;
+		private Integer created_time;
 		
 		private FqlStreamItemAttachment attachment;
 
-	}
 
+		@GwtIncompatible
+		public static class FqlStreamItemAttachmentAdapter implements JsonDeserializer<FqlStreamItemAttachment> {
 
-	public static class FqlStreamItemAttachmentAdapter implements JsonDeserializer<FqlStreamItemAttachment> {
+			@Override
+			public FqlStreamItemAttachment deserialize(JsonElement json, Type type, JsonDeserializationContext context) 
+					throws JsonParseException {
 
-		@Override
-		public FqlStreamItemAttachment deserialize(JsonElement json, Type type, JsonDeserializationContext context) 
-				throws JsonParseException {
+				FqlStreamItemAttachment attachment = null;
 
-			FqlStreamItemAttachment attachment = null;
+				// I think the term to describe this is "polymorphic"
+				if (json.isJsonArray()) {
 
-			// I think the term to describe this is "polymorphic"
-			if (json.isJsonArray()) {
+					attachment = null;
 
-				attachment = null;
+				} else if (json.isJsonObject()) {
 
-			} else if (json.isJsonObject()) {
+					// TODO: this is done wrong.
+					// It should be something like:
+					// attachment = (FqlStreamItemAttachment) context.deserialize(json, FqlStreamItemAttachment.class);
+					// but that has this Adapter attached so it recurses inside here and Internal Server Error occurs.
+					// I'm not sure how to actually use the FqlStreamItemAttachment class in here without starting a new Gson object
 
-				// TODO: this is done wrong.
-				// It should be something like:
-				// attachment = (FqlStreamItemAttachment) context.deserialize(json, FqlStreamItemAttachment.class);
-				// but that has this Adapter attached so it recurses inside here and Internal Server Error occurs.
-				// I'm not sure how to actually use the FqlStreamItemAttachment class in here without starting a new Gson object
+					Gson gson = new Gson();
+					attachment = (FqlStreamItemAttachment) gson.fromJson(json, FqlStreamItemAttachment.class);
 
-				Gson gson = new Gson();
-				attachment = (FqlStreamItemAttachment) gson.fromJson(json, FqlStreamItemAttachment.class);
+				} else {
+					throw new RuntimeException("Unexpected JSON type: " + json.getClass());
+				}
+				return attachment;
 
-			} else {
-				throw new RuntimeException("Unexpected JSON type: " + json.getClass());
 			}
-			return attachment;
 
 		}
-
-	}
 
 
 
@@ -177,11 +170,6 @@ public class FqlStream extends Fql {
 		private FqlStreamItemAttachmentMediaItem[] media; 
 
 		FqlStreamItemAttachment() {}
-
-		public String toString(){
-			Gson gson = new Gson();
-			return gson.toJson(this);
-		}
 
 	}
 
@@ -216,10 +204,6 @@ public class FqlStream extends Fql {
 
 		private FqlStreamItemAttachmentMediaItemPhoto photo;
 
-		public String toString(){
-			Gson gson = new Gson();
-			return gson.toJson(this);
-		}
 	}
 
 
@@ -234,23 +218,23 @@ public class FqlStream extends Fql {
 			return pid;
 		}
 
-		public String getFbid() {
+		public Long getFbid() {
 			return fbid;
 		}
 
-		public String getOwner() {
+		public Long getOwner() {
 			return owner;
 		}
 
-		public String getIndex() {
+		public Integer getIndex() {
 			return index;
 		}
 
-		public String getWidth() {
+		public Integer getWidth() {
 			return width;
 		}
 
-		public String getHeight() {
+		public Integer getHeight() {
 			return height;
 		}
 
@@ -262,11 +246,11 @@ public class FqlStream extends Fql {
 
 		private String aid;
 		private String pid;
-		private String fbid;
-		private String owner;
-		private String index;
-		private String width;
-		private String height;
+		private Long fbid;
+		private Long owner;
+		private Integer index;
+		private Integer width;
+		private Integer height;
 
 		public FqlStreamItemAttachmentMediaItemPhotoImage[] images;
 
