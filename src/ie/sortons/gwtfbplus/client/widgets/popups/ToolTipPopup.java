@@ -33,6 +33,9 @@ public class ToolTipPopup extends PopupPanel {
 
 		super.show();
 
+		// TODO
+		// There's a proper way of doing this with a callback!
+		
 		if (thisWidth == 0)
 			thisWidth = this.getOffsetWidth();
 

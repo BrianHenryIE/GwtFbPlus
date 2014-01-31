@@ -14,7 +14,7 @@ import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 
 @Embed
 @SkipNullSerialization
-public class FqlPage implements JsonSerializable, Oracle.OracleSearch, Comparable<FqlPage> {
+public class FqlPage implements JsonSerializable, Oracle.FbSearchable, Comparable<FqlPage> {
 
 	@GwtIncompatible("incompatible field")
 	@ApiResourceProperty(name = "class")

@@ -1,0 +1,115 @@
+@external item, item-selected, itemDiv, ffoPic, ffoName, ffoNetwork, gwt-TextBox;
+.suggestBoxPopup {
+	border: 1px solid #333333;
+	border-bottom: 2px solid #293e6a;
+	padding: 2px 0;
+	min-width: 175px;
+	background-color: #FFFFFF;
+}
+
+.suggestBoxPopup .item {
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	padding: 2px 6px;
+	width: 100%;
+}
+
+.suggestBoxPopup .item-selected {
+	background-color: #6d84b4;
+	border: 1px solid 3b5998;
+	border-width: 1px 0;
+	color: white;
+}
+
+.suggestBoxPopup table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.suggestBoxPopup .itemDiv {
+	padding: 0;
+	margin: 0;
+	font-size: 11px;
+}
+
+.suggestBoxPopup .ffoPic {
+	width: 32px;
+	height: 32px;
+	padding: 0px;
+	margin-right: 6px;
+}
+
+.suggestBoxPopup .ffoName {
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+
+.suggestBoxPopup .ffoNetwork {
+	color: #999999;
+}
+
+.suggestBoxPopup .item-selected .ffoNetwork {
+	color: white;
+}
+
+.singleBox {
+	border: 1px solid #BDC7D8;
+	height: 20px;
+}
+
+.multiBox {
+	border: 1px solid #BDC7D8;
+	min-height: 20px;
+}
+
+.singleBox input, .multiBox input {
+	display: inline-block;
+	border: 0;
+	width: 100%;
+	padding: 0;
+}
+
+.singleSelected {
+	background-color: #E2E8F6;
+}
+
+.singleSelected .gwt-TextBox {
+	background-color: transparent;
+	color: #000000;
+	margin: 3px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+}
+
+.xableListItem {
+	background-color: #E2E6F0;
+	height: 14px;
+	border: 1px solid #9DACCC;
+	border-radius: 2px 2px 2px 2px;
+	display: inline-block;
+	
+	margin: 1px 2px;
+	padding: 0 3px 0 3px;
+	position: relative;
+	
+	vertical-align: baseline;
+
+	/* Using x-browser inline-block from CommonResources */
+}
+
+.xableListItem span {
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #1C2A47;
+	position: relative;
+	display: inline-block;
+}
+
+.xableButton {
+	position: relative;
+	top: 2px;
+	left: 2px;
+
+	display: inline-block;
+}

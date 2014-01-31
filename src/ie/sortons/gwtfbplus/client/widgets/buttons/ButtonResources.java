@@ -26,12 +26,39 @@ public interface ButtonResources extends ClientBundle {
 	@Source("greenbuttonbackground.png")
 	DataResource greenButtonBackgroundImage();
 
-	@Source("xableup.png")
-	ImageResource xNormal();
+	@Source("x1up.png")
+	ImageResource x1Up();
 
-	@Source("xablehover.png")
-	ImageResource xHover();
+	@Source("x1hover.png")
+	ImageResource x1Hover();
 
-	@Source("xabledown.png")
-	ImageResource xDown();
+	@Source("x1down.png")
+	ImageResource x1Down();
+
+	@Source("x2up.png")
+	ImageResource x2Up();
+
+	@Source("x2hover.png")
+	ImageResource x2Hover();
+
+	@Source("x2down.png")
+	ImageResource x2Down();
+	
+	@Source("x3up.png")
+	ImageResource x3Up();
+
+	@Source("x3hover.png")
+	ImageResource x3Hover();
+
+	@Source("x3down.png")
+	ImageResource x3Down();
+	
+	@Source("x4up.png")
+	ImageResource x4Up();
+
+	@Source("x4hover.png")
+	ImageResource x4Hover();
+
+	@Source("x4down.png")
+	ImageResource x4Down();
 }

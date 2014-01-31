@@ -97,9 +97,9 @@ The only difference should be the \<script id="signedRequest"\> which is picked 
 
 <dt>Get Firefox</dt>
 
-For the GWT plugin to inside the Facebook iframe, you'll have to download an older version of Firefox. I use 15, maybe some newer ones work but there's a bug report out somewhere there for this problem. It only affects hosted mode, not deployed apps.
+For the GWT plugin to inside the Facebook iframe, you'll have to download an older version of Firefox. I use 15, maybe some newer ones work but there's a [bug report](https://code.google.com/p/google-web-toolkit/issues/detail?id=4468) for this problem. It only affects hosted mode, not deployed apps.
 
-Download: [Firefox 15](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/15.0/), [Firebug](http://getfirebug.com/).
+Download: [Firefox 15](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/15.0/), [Firebug](http://getfirebug.com/). 
 
 <dt>Edit hosted.html</dt>
 
