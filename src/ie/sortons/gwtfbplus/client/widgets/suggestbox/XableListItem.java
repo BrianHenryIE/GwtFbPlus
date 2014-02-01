@@ -2,7 +2,6 @@ package ie.sortons.gwtfbplus.client.widgets.suggestbox;
 
 
 import ie.sortons.gwtfbplus.client.widgets.buttons.X4Button;
-import ie.sortons.gwtfbplus.client.widgets.suggestbox.Oracle.FbSearchable;
 
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;

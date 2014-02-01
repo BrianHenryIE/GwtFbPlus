@@ -1,6 +1,5 @@
 package ie.sortons.gwtfbplus.client.widgets.suggestbox;
 
-import ie.sortons.gwtfbplus.client.widgets.suggestbox.Oracle.FbSearchable;
 
 import com.google.gwt.user.client.ui.MultiWordSuggestOracle.MultiWordSuggestion;
 
@@ -16,11 +15,6 @@ public class FbSuggestion extends MultiWordSuggestion {
 		this.name = object.getTitle();
 		this.uid = object.getUid();
 		this.subtitle = object.getSubTitle();
-	}
-
-	// TODO Delete!
-	public FbSuggestion(long parseLong, String replacementString, String affiliations) {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package ie.sortons.gwtfbplus.shared.domain.fql;
 
-import ie.sortons.gwtfbplus.client.widgets.suggestbox.Oracle;
+import ie.sortons.gwtfbplus.client.widgets.suggestbox.FbSearchable;
 
 import com.google.api.server.spi.config.ApiResourceProperty;
 import com.google.gwt.core.shared.GwtIncompatible;
@@ -14,7 +14,7 @@ import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 
 @Embed
 @SkipNullSerialization
-public class FqlPage implements JsonSerializable, Oracle.FbSearchable, Comparable<FqlPage> {
+public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPage> {
 
 	@GwtIncompatible("incompatible field")
 	@ApiResourceProperty(name = "class")
