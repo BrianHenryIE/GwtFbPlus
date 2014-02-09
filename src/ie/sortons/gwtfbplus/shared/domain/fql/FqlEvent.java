@@ -17,16 +17,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 
-// TODO
-/**
- * json = json.replace("\"venue\":[]", "\"venue\":{}");
- * 
- * is being used because when Facebook has no data to return, it 
- * returns an empty array rather than an empty object. 
- * 
- * The correct solution to this is a GSON adapter, as done with
- * FqlStream
- */
+
 
 /**
  * http://developers.facebook.com/docs/reference/fql/event/
@@ -34,7 +25,8 @@ import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
  * 
  */
 
-@Embed @SkipNullSerialization
+@Embed
+@SkipNullSerialization
 public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 
 	@GwtIncompatible
@@ -67,6 +59,10 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 
 	public String getHost() {
 		return host;
+	}
+
+	public Boolean getIsDateOnly() {
+		return is_date_only;
 	}
 
 	public String getDescription() {
@@ -131,24 +127,23 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 
 	public FqlEvent() {
 	}
-	
-	
+
 	public Integer all_members_count;
 	public String app_id;
 	public Integer attending_count;
 	public Boolean can_invite_friends;
-	
+
 	// int
 	public Long creator;
-	
+
 	public String creator_cursor;
 	public Integer declined_count;
 	public String description;
-	
+
 	// int?
 	public Long eid;
 	public Date end_time;
-	
+
 	// public FeedTargeting feed_targeting
 
 	public Boolean has_profile_pic;
@@ -162,26 +157,17 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 	public String pic_square;
 	public String pic;
 	public String privacy;
-	
+
 	@Index
 	public Date start_time;
 	public String update_time;
-	
 
 	public FqlEventVenue venue;
 
-	
-	
-	
-	
-	
 	public String unsure_count;
-	
+
 	public String not_replied_count;
 
-	
-	
-	
 	@Override
 	public int compareTo(FqlEvent other) {
 		return this.eid.compareTo(other.getEid());
@@ -201,7 +187,8 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 		return eid.hashCode();
 	}
 
-	@Embed @SkipNullSerialization
+	@Embed
+	@SkipNullSerialization
 	public static class FqlEventVenue implements JsonSerializable {
 
 		public FqlEventVenue() {

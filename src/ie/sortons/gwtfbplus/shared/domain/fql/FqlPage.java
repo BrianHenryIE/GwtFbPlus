@@ -18,7 +18,7 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 
 	@GwtIncompatible("incompatible field")
 	@ApiResourceProperty(name = "class")
-	public String classname = "ie.sortons.gwtfbplus.shared.domain.fql.FqlPage";
+	public final String classname = "ie.sortons.gwtfbplus.shared.domain.fql.FqlPage";
 
 	public FqlPage() {
 	}
@@ -191,7 +191,6 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 	@Override
 	public int compareTo(FqlPage other) {
 		return this.page_id.compareTo(other.getPageId());
-
 	}
 
 	/**

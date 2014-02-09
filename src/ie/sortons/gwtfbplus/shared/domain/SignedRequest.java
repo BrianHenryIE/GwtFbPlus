@@ -4,6 +4,7 @@ import org.apache.commons.codec.binary.Base64;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.shared.GwtIncompatible;
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 
@@ -214,4 +215,8 @@ public class SignedRequest implements JsonSerializable {
 		return signedrequest;
 	}
 
+	// This is incompatible with the server but the /* comments */ mean it's safe to leave in!
+	public static final native JavaScriptObject getSignedRequestFromHTML() /*-{
+		return $wnd._sr_data;
+	}-*/;
 }
