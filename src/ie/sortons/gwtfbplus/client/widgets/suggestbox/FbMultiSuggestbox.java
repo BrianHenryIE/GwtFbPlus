@@ -60,7 +60,8 @@ public class FbMultiSuggestbox extends Composite implements HasValueChangeHandle
 		predictor.addSelectionHandler(new SelectionHandler<Suggestion>() {
 			@Override
 			public void onSelection(SelectionEvent<Suggestion> event) {
-				addValue(((FbSuggestion) event.getSelectedItem()).getObject(), true);
+				addValue(((FbSuggestionWidget) event.getSelectedItem()).getObject(), true);
+				oracle.remove(((FbSuggestionWidget) event.getSelectedItem()).getObject());
 				predictor.setValue("");
 			}
 		});
@@ -127,6 +128,7 @@ public class FbMultiSuggestbox extends Composite implements HasValueChangeHandle
 			@Override
 			public void onClick(ClickEvent event) {
 				value.remove(item);
+				oracle.add(item);
 				refresh();
 				ValueChangeEvent.fire(FbMultiSuggestbox.this, getValue());
 			}

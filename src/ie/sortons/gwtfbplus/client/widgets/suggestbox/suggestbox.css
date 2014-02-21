@@ -56,6 +56,7 @@
 .singleBox {
 	border: 1px solid #BDC7D8;
 	height: 20px;
+	background-color: #FFF;
 }
 
 .multiBox {
@@ -68,6 +69,7 @@
 	border: 0;
 	width: 100%;
 	padding: 0;
+	outline: none;
 }
 
 .singleSelected {

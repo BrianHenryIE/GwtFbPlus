@@ -13,7 +13,7 @@ public interface FbSearchable {
 	 * 
 	 * @return
 	 */
-	String getSearchText();
+	String getSearchableString();
 
 	/**
 	 * The title of the item in the suggestion list, e.g. the friend's name
