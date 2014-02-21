@@ -24,13 +24,16 @@ public abstract class LandingPageServlet extends HttpServlet {
 	private String signedRequestData = "";
 	private String overflow = "";
 
+	private String appSecret;
+
 	private String httpOrS(HttpServletRequest request) {
 		return request.getRequestURL().toString().replaceAll("(https?://).*", "$1");
 	}
 
-	protected LandingPageServlet(String gwtEntryPoint, String appId) {
+	protected LandingPageServlet(String gwtEntryPoint, String appId, String appSecret) {
 		this.gwtEntryPoint = gwtEntryPoint;
 		this.appId = appId;
+		this.appSecret = appSecret;
 	}
 
 	protected HttpServletRequest request;
@@ -40,34 +43,52 @@ public abstract class LandingPageServlet extends HttpServlet {
 	protected String head = "";
 	protected String body = "";
 
+	protected SignedRequest signedRequest;
+
 	/**
-	 * Method which runs on each request, giving the extending class a chance to read and write to the request and response
-	 * Also be aware of String head and String body which add strings into the head and body!
+	 * Method which runs on each request, giving the extending class a chance to read and write to the request and
+	 * response Also be aware of String head and String body which add strings into the head and body!
 	 */
-	protected void readWriteRequest(){};
+	protected void readWriteRequest() {
+	};
 
 	private Gson gson = new Gson();
 
 	// Inside Facebook, it will always be POST
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		SignedRequest signedRequest = SignedRequest.parseSignedRequest(request.getParameter("signed_request"));
+		// encrypt and add the signed request cookies
+		if (request.getParameter("signed_request") != null) {
 
-		if (signedRequest.getOauthToken() != null) {
-			Cookie accessTokenCookie = new Cookie("accessToken", signedRequest.getOauthToken());
-			// Store the cookie for as long as the access token lasts
-			accessTokenCookie.setMaxAge((int) (Integer.parseInt(signedRequest.getExpires()) - (new Date().getTime() / 1000)));
-			response.addCookie(accessTokenCookie);
+			signedRequest = SignedRequest.parseSignedRequest(request.getParameter("signed_request"));
+
+			String encryptedSignedRequest = null;
+			SimpleStringCipher ssc = new SimpleStringCipher(appSecret);
+			try {
+				encryptedSignedRequest = ssc.encrypt(request.getParameter("signed_request"));
+				Cookie encryptedSignedRequestCookie = new Cookie("encryptedSignedRequest", encryptedSignedRequest);
+				response.addCookie(encryptedSignedRequestCookie);
+				System.out.println("encrypted sr cookie added");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			if (signedRequest.getOauthToken() != null) {
+				Cookie accessTokenCookie = new Cookie("accessToken", signedRequest.getOauthToken());
+				// Store the cookie for as long as the access token lasts
+				accessTokenCookie.setMaxAge((int) (Integer.parseInt(signedRequest.getExpires()) - (new Date().getTime() / 1000)));
+				response.addCookie(accessTokenCookie);
+			}
+
+			if (signedRequest.getUserId() != null) {
+				Cookie userIdCookie = new Cookie("userId", signedRequest.getUserId());
+				userIdCookie.setMaxAge((int) (Integer.parseInt(signedRequest.getExpires()) - (new Date().getTime() / 1000)));
+				response.addCookie(userIdCookie);
+			}
+
+			signedRequestData = "  <script id=\"signedRequest\">\n" + "    var _sr_data = " + gson.toJson(signedRequest) + "\n  </script>\n\n";
 		}
-
-		if (signedRequest.getUserId() != null) {
-			Cookie userIdCookie = new Cookie("userId", signedRequest.getUserId());
-			userIdCookie.setMaxAge((int) (Integer.parseInt(signedRequest.getExpires()) - (new Date().getTime() / 1000)));
-			response.addCookie(userIdCookie);
-		}
-
-		signedRequestData = "  <script id=\"signedRequest\">\n" + "    var _sr_data = " + gson.toJson(signedRequest) + "\n  </script>\n\n";
-
 		// This isn't needed/desirable outside the fb canvas
 		overflow = " style=\"overflow: hidden\"";
 
@@ -103,6 +124,10 @@ public abstract class LandingPageServlet extends HttpServlet {
 		// http://apps.facebook.com/sortonsdev/?fb_page_id=176727859052209
 	}
 
+	// TODO
+	// If it's a GET, use the referrer to find the Facebook page that linked it.
+	// Or canvas redirect to apps.facebook.com/AppID
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("Servlet execution... " + request.getMethod());
@@ -128,8 +153,7 @@ public abstract class LandingPageServlet extends HttpServlet {
 		// Write out body
 		out.print("<body" + overflow + "> \n\n" + "  <div id='fb-root'></div> \n\n" + // required for Facebook API
 				"  <div id=\"gwt\"></div> \n\n" + // root of document for GWT
-				body +
-				"</body> \n\n");
+				body + "</body> \n\n");
 
 		out.print("</html>");
 		out.flush();
