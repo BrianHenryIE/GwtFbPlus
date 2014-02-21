@@ -31,6 +31,9 @@ public interface GwtFbPlusResources extends ClientBundle {
 	@Source("loading.gif")
 	ImageResource loadingAnimation();
 
+	@Source("smallloading.gif")
+	ImageResource smallLoadingAnimation();
+
 	@Source("redx.png")
 	ImageResource redX();
 

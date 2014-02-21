@@ -1,4 +1,4 @@
-package ie.sortons.gwtfbplus.client.fql;
+package ie.sortons.gwtfbplus.client.overlay.fql;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;

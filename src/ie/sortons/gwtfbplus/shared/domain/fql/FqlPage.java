@@ -1,24 +1,15 @@
 package ie.sortons.gwtfbplus.shared.domain.fql;
 
-import ie.sortons.gwtfbplus.client.widgets.suggestbox.FbSearchable;
-
-import com.google.api.server.spi.config.ApiResourceProperty;
-import com.google.gwt.core.shared.GwtIncompatible;
 import com.googlecode.objectify.annotation.Embed;
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 
 /**
- * http://developers.facebook.com/docs/reference/fql/page/
+ * @see http://developers.facebook.com/docs/reference/fql/page/
  */
-
-@Embed
 @SkipNullSerialization
-public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPage> {
-
-	@GwtIncompatible("incompatible field")
-	@ApiResourceProperty(name = "class")
-	public final String classname = "ie.sortons.gwtfbplus.shared.domain.fql.FqlPage";
+@Embed
+public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 
 	public FqlPage() {
 	}
@@ -33,16 +24,27 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 		return location;
 
 	}
-
+	
+	
 	public String about;
+	
 	public String access_token;
+	
+	
 	public String affiliation;
+	
 	public String app_id;
+	
 	public String artists_we_like;
+	
 	public String attire;
+	
 	public String awards;
+	
 	public String band_interests;
+	
 	public String band_members;
+	
 	public String best_page_id;
 	public String bio;
 	public String birthday;
@@ -153,26 +155,6 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 	public String written_by;
 	public Integer unread_notif_count;
 
-	@Override
-	public String getTitle() {
-		return name;
-	}
-
-	@Override
-	public String getSubTitle() {
-		// TODO return the address
-		return "";
-	}
-
-	@Override
-	public Long getUid() {
-		return page_id;
-	}
-
-	@Override
-	public String getSearchText() {
-		return name;
-	}
 
 	@Override
 	public final boolean equals(Object obj) {
@@ -199,13 +181,9 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 	 * @author brianhenry
 	 * 
 	 */
-	@Embed
 	@SkipNullSerialization
+	@Embed
 	public static class FqlPageLocation implements JsonSerializable {
-
-		@GwtIncompatible
-		@ApiResourceProperty(name = "class")
-		public final String classname = "ie.sortons.gwtfbplus.shared.domain.fql.FqlPage.FqlPageLocation";
 
 		/**
 		 * @return the Street of the location
@@ -277,7 +255,7 @@ public class FqlPage implements JsonSerializable, FbSearchable, Comparable<FqlPa
 			return located_in;
 		}
 
-		public String friendlyString() {
+		public String getFriendlyString() {
 			String location = "";
 
 			if (street != null && !street.trim().equals("")) {

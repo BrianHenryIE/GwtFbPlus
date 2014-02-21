@@ -450,3 +450,47 @@
 	padding-right:3px;
 }
 
+
+
+
+
+		.settingsTable {
+		padding:5px 10px;
+		margin:0;
+		width: 100%;
+		border-collapse: collapse;
+		cellspacing:0;
+		border-top: 1px
+		solid #aaa;
+		border-bottom: 1px solid #aaa;
+		}
+
+		.settingsTable tr {
+		height:
+		34px;
+		border-top: 1px solid #e9e9e9;
+		}
+
+		.settingsTable tr:hover {
+		background-color: #f7f7f7;
+		}
+
+		.settingsTable th
+		{
+		vertical-align: top;
+		padding-top: 10px;
+		font-weight: bold;
+		color: #333;
+		padding-left: 10px;
+		}
+
+		.settingsTable td {
+		padding: 10px;
+		}
+
+		.loginButton {
+		margin-left:50px;
+		}
+		.inline{
+		display: inline-block;
+		}

@@ -107,6 +107,10 @@ public class FqlStream {
 		public FqlStreamItemAttachment getAttachment() {
 			return attachment;
 		}
+		
+		public int getType(){
+			return type;
+		}
 
 		
 		private Long actor_id;
@@ -123,7 +127,8 @@ public class FqlStream {
 		
 		private FqlStreamItemAttachment attachment;
 
-
+		private int type;
+		
 		@GwtIncompatible
 		public static class FqlStreamItemAttachmentAdapter implements JsonDeserializer<FqlStreamItemAttachment> {
 

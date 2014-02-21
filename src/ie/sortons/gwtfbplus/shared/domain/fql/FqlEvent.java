@@ -5,7 +5,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.google.api.server.spi.config.ApiResourceProperty;
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -28,10 +27,6 @@ import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 @Embed
 @SkipNullSerialization
 public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
-
-	@GwtIncompatible
-	@ApiResourceProperty(name = "class")
-	public final String classname = "ie.sortons.gwtfbplus.shared.domain.fql.FqlEvent";
 
 	public Long getEid() {
 		return eid;
