@@ -14,12 +14,6 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 	public FqlPage() {
 	}
 
-	public FqlPage(String name, String pageUrl, Long pageId) {
-		this.page_id = pageId;
-		this.name = name;
-		this.page_url = pageUrl;
-	}
-
 	public FqlPageLocation getLocation() {
 		return location;
 
@@ -111,6 +105,14 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 
 	public String getPageUrl() {
 		return page_url;
+	}
+
+	public String getAbout() {
+		return about;
+	}
+
+	public String getPhone() {
+		return phone;
 	}
 
 	public String parent_page;
@@ -286,6 +288,9 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 				location += country;
 			}
 
+			location = location.replace(" ,", ",");
+			location = location.replace(",,", ",");
+			
 			return location;
 		}
 
