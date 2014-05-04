@@ -1,0 +1,70 @@
+@url buttonbackground mapControlButtonBackground;
+@url buttonbackgroundpressed mapControlButtonBackgroundPressed;
+.leftOverMap {
+	z-index: 1;
+	background: -webkit-gradient(linear, left center, right center, from(rgba(233, 234,
+		237, 1)), to(rgba(233, 234, 237, 0)));
+	background: -webkit-linear-gradient(left, rgba(233, 234, 237, 1),
+		rgba(233, 234, 237, 0));
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 15%;
+	pointer-events: none;
+}
+
+.rightOverMap {
+	background: -webkit-gradient(linear, right center, left center, from(rgba(233, 234,
+		237, 1)), to(rgba(233, 234, 237, 0)));
+	background: -webkit-linear-gradient(right, rgba(233, 234, 237, 1),
+		rgba(233, 234, 237, 0));
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 15%;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.bottomOverMap {
+	background: -webkit-gradient(linear, center bottom, center top, from(rgba(233, 234,
+		237, 1)), to(rgba(233, 234, 237, 0)));
+	background: -webkit-linear-gradient(bottom, rgba(233, 234, 237, 1),
+		rgba(233, 234, 237, 0));
+	bottom: 0;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+.mapZoomControls {
+	z-index: 4;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	border-color: rgba(0, 0, 0, .35);
+	border: 0;
+	border-radius: 1px 1px 1px 1px;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .25), 0 0 0 1px
+		rgba(0, 0, 0, .05);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.mapZoomButton {
+	background-color: #ffffff;
+	display: block;
+	cursor: pointer;
+	z-index: 4;
+}
+
+.mapZoomButtonUp {
+	background-image: buttonbackground;
+}
+
+.mapZoomButtonDown {
+	background-image: buttonbackgroundpressed;
+}
