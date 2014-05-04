@@ -1,6 +1,9 @@
-@external .DateBox, .DateBox-readonly, gwt-DatePicker, datePickerNextButton, datePickerWeekdayLabel, datePickerDayIsHighlighted, datePickerWeekendLabel, datePickerDayIsFiller, datePickerMonth, datePickerDayIsValue, datePickerMonthSelector, datePickerDay, datePickerDayIsValueAndHighlighted, datePickerDayIsToday, datePickerPreviousButton, datePickerDayIsDisabled, datePickerDays, datePickerDayIsWeekend;
+@external .dateBoxPopup, .DateBox, .DateBox-readonly, gwt-DatePicker, datePickerNextButton, datePickerWeekdayLabel, datePickerDayIsHighlighted, datePickerWeekendLabel, datePickerDayIsFiller, datePickerMonth, datePickerDayIsValue, datePickerMonthSelector, datePickerDay, datePickerDayIsValueAndHighlighted, datePickerDayIsToday, datePickerPreviousButton, datePickerDayIsDisabled, datePickerDays, datePickerDayIsWeekend;
 @url calendaricon calendarIcon;
 
+.dateBoxPopup {
+	z-index:5;
+}
 .DateBox,.DateBox-readonly {
 	width: 95px;
 	margin: 0;
@@ -12,6 +15,7 @@
 	background-position: right 5px center;
 	color: #3b5998;
 	border-color: #bdc7d8;
+
 }
 
 .fbStyleDatePicker {
@@ -19,6 +23,7 @@
 	border-bottom: 2px solid #293E6C;
 	border-top-color: #333333;
 	width: 210px;
+	
 }
 
 .fbStyleDatePicker tr {

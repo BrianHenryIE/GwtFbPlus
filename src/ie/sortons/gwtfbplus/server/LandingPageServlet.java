@@ -22,7 +22,7 @@ public abstract class LandingPageServlet extends HttpServlet {
 	private String appId;
 
 	private String signedRequestData = "";
-	private String overflow = "";
+	private String style = "";
 
 	private String appSecret;
 
@@ -91,7 +91,7 @@ public abstract class LandingPageServlet extends HttpServlet {
 		
 		}
 		// This isn't needed/desirable outside the fb canvas
-		overflow = " style=\"overflow: hidden\"";
+		style += " overflow: hidden;";
 
 		doGet(request, response);
 
@@ -156,7 +156,7 @@ public abstract class LandingPageServlet extends HttpServlet {
 			out.print("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> \n"
 					+ // As specified for Bing Maps API
 					"<html xmlns=\"http://www.w3.org/1999/xhtml\""
-					+ overflow
+					+ "style=\""+style+" margin:0;\""
 					+ "> \n\n"
 					+ "<head> \n\n"
 					+ "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> \n\n"
@@ -172,7 +172,7 @@ public abstract class LandingPageServlet extends HttpServlet {
 					head + "</head> \n\n");
 
 			// Write out body
-			out.print("<body" + overflow + "> \n\n" + "  <div id='fb-root'></div> \n\n" + // required for Facebook API
+			out.print("<body" + style + "> \n\n" + "  <div id='fb-root'></div> \n\n" + // required for Facebook API
 					"  <div id=\"gwt\"></div> \n\n" + // root of document for GWT
 					body + "</body> \n\n");
 
@@ -182,6 +182,6 @@ public abstract class LandingPageServlet extends HttpServlet {
 		}
 
 		signedRequestData = "";
-		overflow = "";
+		style = "";
 	}
 }

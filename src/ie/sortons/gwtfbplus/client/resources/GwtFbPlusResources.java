@@ -25,9 +25,6 @@ public interface GwtFbPlusResources extends ClientBundle {
 		String errorLabel();
 	}
 
-	@Source("mappushpin.png")
-	ImageResource mapPushPin();
-
 	@Source("loading.gif")
 	ImageResource loadingAnimation();
 

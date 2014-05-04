@@ -1,5 +1,7 @@
 package ie.sortons.gwtfbplus.shared.domain.fql;
 
+import java.util.ArrayList;
+
 import com.googlecode.objectify.annotation.Embed;
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
@@ -18,27 +20,25 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 		return location;
 
 	}
-	
-	
+
 	public String about;
-	
+
 	public String access_token;
-	
-	
+
 	public String affiliation;
-	
+
 	public String app_id;
-	
+
 	public String artists_we_like;
-	
+
 	public String attire;
-	
+
 	public String awards;
-	
+
 	public String band_interests;
-	
+
 	public String band_members;
-	
+
 	public String best_page_id;
 	public String bio;
 	public String birthday;
@@ -47,8 +47,14 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 	// public Struct budget_recs;
 	public String built;
 	public Boolean can_post;
-	// public Struct categories;
-	public Integer checkins;
+	public ArrayList<FqlPageCategory> categories;
+
+	public static class FqlPageCategory implements JsonSerializable {
+		public Long id;
+		public String name;
+	}
+
+	public String checkins;
 	public String company_overview;
 	public String culinary_team;
 	public String current_location;
@@ -117,7 +123,16 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 
 	public String parent_page;
 	// public Struct parking;
-	// public Struct payment_options;
+	public FqlPagePaymentOptions payment_options;
+
+	public static class FqlPagePaymentOptions implements JsonSerializable {
+		public Boolean cash_only;
+		public Boolean visa;
+		public Boolean amex;
+		public Boolean mastercard;
+		public Boolean discover;
+	}
+
 	public String personal_info;
 	public String personal_interests;
 	public String pharma_safety_info;
@@ -138,7 +153,22 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 	public String public_transit;
 	public String record_label;
 	public String release_date;
-	// public Struct restaurant_services;
+	public FqlPageRestaurantServices restaurant_services;
+
+	public static class FqlPageRestaurantServices implements JsonSerializable {
+
+		public Boolean reserve;
+		public Boolean walkins;
+		public Boolean groups;
+		public Boolean kids;
+		public Boolean takeout;
+		public Boolean delivery;
+		public Boolean catering;
+		public Boolean waiter;
+		public Boolean outdoor;
+
+	}
+
 	// public Struct restaurant_specialties;
 	public String schedule;
 	public String screenplay_by;
@@ -156,7 +186,6 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 	public Integer were_here_count;
 	public String written_by;
 	public Integer unread_notif_count;
-
 
 	@Override
 	public final boolean equals(Object obj) {
@@ -290,7 +319,7 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 
 			location = location.replace(" ,", ",");
 			location = location.replace(",,", ",");
-			
+
 			return location;
 		}
 
@@ -305,8 +334,9 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 		public String name;
 		public Long located_in;
 
-		public FqlPageLocation(){}
-		
+		public FqlPageLocation() {
+		}
+
 	}
 
 }
