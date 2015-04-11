@@ -1,0 +1,8 @@
+/target/
+.settings
+.project
+.classpath
+src/.DS_Store
+war
+www-test
+target

@@ -1,9 +1,9 @@
 
-ie.sortons.GwtFB+
+ie.sortons.GwtFb+
 =================
 
 This is a collection of widgets, overlays, gson classes and a servlet for building Facebook Canvas apps with Google Web Toolkit on Google App Engine. 
-The original GwtFB library, that is required, has its home with [psyrtsov](https://github.com/psyrtsov/gwtfb) and [olams](https://github.com/olams/GwtFB), and there are more GWT Facebook libraries on GitHub by [denormans](https://github.com/denormans/FacebookGWT), [handstandtech](https://github.com/handstandtech/Facebook-API) and [adrianmigraso](https://github.com/adrianmigraso/Facebook-ConnectJS-GWT-Port).
+The original GwtFB library, that has been subsumed, has its home with [olams](https://github.com/olams/GwtFB), and there are more GWT Facebook libraries on GitHub by [denormans](https://github.com/denormans/FacebookGWT), [handstandtech](https://github.com/handstandtech/Facebook-API) and [adrianmigraso](https://github.com/adrianmigraso/Facebook-ConnectJS-GWT-Port).
 
 Applications made with this library include [Sortons Events](http://apps.facebook.com/sortonsevents/) ([source](https://github.com/BrianHenryIE/Friends--Events)) and [UCD Events](http://apps.facebook.com/ucdevents/) ([source](https://github.com/BrianHenryIE/UCD-Events)). 
 
@@ -12,10 +12,18 @@ Feedback on my code would be appreciated. My email address is brian.henry@sorton
 Quickstart
 ----------
 
-Download [gwtfb.jar](http://www.sortons.ie/gwt/gwtfb.jar) a [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add them to your build path and add to your .gwt.xml file:
+Download [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add it to your build path and add to your .gwt.xml file:
 
-    <inherits name='com.gwtfb.GwtFB'/>
     <inherits name='ie.sortons.gwtfbplus.GwtFBplus'/>
+
+For Maven, pull the library from GitHub and mvn install to add it to your local repository. Then:
+
+	<dependency>
+		<groupId>ie.sortons</groupId>
+		<artifactId>gwtfbplus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+		
     
 
 Dependencies
@@ -45,7 +53,7 @@ Make a class called LandingPage.java in your server package that extends Landing
     @SuppressWarnings("serial")
     public class LandingPage extends LandingPageServlet 
     {
-	    private final static String ENTRYPOINT = "gwt__examples/gwt__examples.nocache.js";
+	    private final static String ENTRYPOINT = "projectname/projectname.nocache.js";
 	    private final static String APPID = "0123456789";
 	
 	    public LandingPage() {
