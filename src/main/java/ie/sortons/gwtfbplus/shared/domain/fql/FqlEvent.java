@@ -11,8 +11,6 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.google.gwt.core.shared.GwtIncompatible;
-import com.googlecode.objectify.annotation.Embed;
-import com.googlecode.objectify.annotation.Index;
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
 
@@ -22,7 +20,7 @@ import com.kfuntak.gwt.json.serialization.client.SkipNullSerialization;
  * 
  */
 
-@Embed
+
 @SkipNullSerialization
 public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 
@@ -151,7 +149,6 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 	public String pic;
 	public String privacy;
 
-	@Index
 	public Date start_time;
 	public String update_time;
 
@@ -180,7 +177,6 @@ public class FqlEvent implements JsonSerializable, Comparable<FqlEvent> {
 		return eid.hashCode();
 	}
 
-	@Embed
 	@SkipNullSerialization
 	public static class FqlEventVenue implements JsonSerializable {
 
