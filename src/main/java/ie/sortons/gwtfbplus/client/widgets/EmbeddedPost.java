@@ -1,13 +1,11 @@
 package ie.sortons.gwtfbplus.client.widgets;
 
-import ie.sortons.gwtfbplus.client.api.FBXfbml;
-
-import com.google.gwt.core.client.Callback;
 import com.google.gwt.dom.client.IFrameElement;
-import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
+
+import ie.sortons.gwtfbplus.client.api.FBXfbml;
 
 public class EmbeddedPost extends Composite {
 
@@ -15,7 +13,7 @@ public class EmbeddedPost extends Composite {
 	String postUrl;
 	IFrameElement post;
 
-	Callback<String, String> visibleCb;
+	Command cb;
 
 	/**
 	 * @see https://developers.facebook.com/docs/plugins/embedded-posts/
@@ -28,55 +26,32 @@ public class EmbeddedPost extends Composite {
 	public EmbeddedPost(String postUrl, int width) {
 		this.postUrl = postUrl;
 		initWidget(panel);
-		panel.add(new HTMLPanel("<div class=\"fb-post\" data-href=\"" + postUrl + "\" data-width=\"" + width + "\"></div>"));
+		panel.getElement().setInnerHTML(
+				"<div class=\"fb-post\" data-href=\"" + postUrl + "\" data-width=\"" + width + "\"></div>");
+		panel.getElement().setId(generateId());
 	}
 
-	public EmbeddedPost(String postUrl, int width, Callback<String, String> visibleCb) {
+	public EmbeddedPost(String postUrl, int width, Command cb) {
 		this(postUrl, width);
-		this.visibleCb = visibleCb;
+		this.cb = cb;
 	}
 
 	@Override
 	protected void onAttach() {
 		super.onAttach();
 
-		// TODO
-		// What happens here when fbinit hasn't been called?
-		FBXfbml.parse();
-
-		post = panel.getWidget().getElement().getFirstChildElement().getFirstChildElement().getFirstChildElement().cast();
-
-		// There's no event for visibility being changed (which we'll use as an indicator that it's finished loading)
-		// so here's a horrible timer.
-		if (visibleCb != null)
-			checkVisibility.run();
+		if (cb == null)
+			FBXfbml.parse(this);
+		else
+			FBXfbml.parse(this, cb);
 
 	}
 
-	Timer checkVisibility = new Timer() {
-		@Override
-		public void run() {
-			if (post.getStyle().getVisibility().equals("visible"))			
-				visibleCb.onSuccess(postUrl);
-			else
-				checkVisibility.schedule(200);
-		}
-	};
+	private static int idNumber = 0;
 
-	// stuff below probably needed for sites that haven't called fbcore.init
-	// * private static boolean injected = false;
+	private static String generateId() {
+		idNumber++;
+		return "embeddedPost-" + idNumber;
+	}
 
-	// Ensures the xfbml script to build the embedded posts is attached. Should run automatically
-	/*
-	 * public static void xfbml() {
-	 * 
-	 * // if (!injected) {
-	 * 
-	 * ScriptInjector.fromString("		<script>(function(d, s, id) {" + "		  var js, fjs = d.getElementsByTagName(s)[0];" +
-	 * "		  if (d.getElementById(id)) return;" + "		  js = d.createElement(s); js.id = id;" +
-	 * "		  js.src = \"//connect.facebook.net/en_GB/all.js#xfbml=1&appId=346300752178533\";" +
-	 * "		  fjs.parentNode.insertBefore(js, fjs);" + "		}(document, 'script', 'facebook-jssdk'));</script>"); //}
-	 * 
-	 * }
-	 */
 }
