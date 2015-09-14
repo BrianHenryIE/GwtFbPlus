@@ -1,6 +1,4 @@
-
-ie.sortons.GwtFb+
-=================
+# ie.sortons.GwtFb+
 
 This is a collection of widgets, overlays, gson classes and a servlet for building Facebook Canvas apps with Google Web Toolkit on Google App Engine. 
 The original GwtFB library, that has been subsumed, has its home with [olams](https://github.com/olams/GwtFB), and there are more GWT Facebook libraries on GitHub by [denormans](https://github.com/denormans/FacebookGWT), [handstandtech](https://github.com/handstandtech/Facebook-API) and [adrianmigraso](https://github.com/adrianmigraso/Facebook-ConnectJS-GWT-Port).
@@ -9,129 +7,83 @@ Applications made with this library include [Sortons Events](http://apps.faceboo
 
 Feedback on my code would be appreciated. My email address is brian.henry@sortons.ie
 
-Quickstart
-----------
+## Quickstart
+I assume you're using Maven and you're comforatble with Git – i.e. you have both installed.  Open a command prompt/terminal window, change directory (cd) to the folder you'd like the codes stored in (Sites/Workspace/etc.) and type: 
 
-Download [gwtfbplus.jar](http://www.sortons.ie/gwt/gwtfbplus20130808.jar), add it to your build path and add to your .gwt.xml file:
+    git clone https://github.com/BrianHenryIE/GwtFbPlus.git
+Then install the library into your local Maven repository using:
 
-    <inherits name='ie.sortons.gwtfbplus.GwtFBplus'/>
-
-For Maven, pull the library from GitHub and mvn install to add it to your local repository. Then:
+    cd GwtFbPlus
+    mvn install
+Add the following lines to your project's pom.xml dependency list:
 
 	<dependency>
 		<groupId>ie.sortons</groupId>
 		<artifactId>gwtfbplus</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.2-SNAPSHOT</version>
 	</dependency>
-		
-    
+Add this to your ProjectName.gwt.xml file:
 
-Dependencies
-------------
+    <inherits name='ie.sortons.gwtfbplus.GwtFBplus'/>
 
-[Apache Commons Codec](http://commons.apache.org/proper/commons-codec/) (v1.5)
-is used for the base 64 decoding of the Facebook signed request. There is a method in the 
-Java Standard library that does this, but it wasn't behaving.
+### Dependencies
+The project GwtProJsonSerializer is needed but is not in Maven Central or Sonatype repositories. As above,
 
-[google-gson](https://code.google.com/p/google-gson/) (v2.2.4)
-is Google's library for dealing with json server side.
+    git clone https://github.com/ubiquitousthey/gwtprojsonserializer.git
+    mvn install
 
-[GwtProJsonSerializer](http://www.sortons.ie/gwt/gwtprojsonserializer-1.0.6.jar)
-for client side json serialization and deserialization. Also add <inherits name='com.kfuntak.gwt.json.serialization.GWTProJsonSerializer' /> to your .gwt.xml file?
+## Using the library
 
-Using the library
------------------
+    This information is hugely incomplete since Devmode was deperecated.
 
-<dt>Create a Servlet</dt>
+// TODO
 
-We're not going to use the .html file to start our application, instead we'll use a servlet which will deal with anything Facebook posts to your Canvas or Page tab app.
-  
-Make a class called LandingPage.java in your server package that extends LandingPageServlet and calls the superclass constructor with your nocache.js as the argument.
+* Start a Maven project in Eclipse
+* Create subpackages for client, server and shared
+* Add ProjectName.gwt.xml to the main package
+* Create a webapp folder and create your index.html in it
 
-    import ie.sortons.gwtfbplus.server.LandingPageServlet;
-
-    @SuppressWarnings("serial")
-    public class LandingPage extends LandingPageServlet 
-    {
-	    private final static String ENTRYPOINT = "projectname/projectname.nocache.js";
-	    private final static String APPID = "0123456789";
-	
-	    public LandingPage() {
-		    super(ENTRYPOINT, APPID);
-	    }
-    }
-
-You then have to specify the servlet in your war/WEB-INF/web.xml
-
-    <servlet>
-      <servlet-name>LandingPage</servlet-name>
-      <servlet-class>ie.sortons.gwtfbplusexample.server.LandingPage</servlet-class>
-    </servlet>
-    <servlet-mapping>
-      <servlet-name>LandingPage</servlet-name>
-      <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
-That's the server side done, if your GWT code is minimal at this stage, you can run the dev server, go to localhost:8888/ and it will look very like this: 
-
+```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
     <html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden"> 
-    
     <head> 
-    
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
-    
-      <script id="signedRequest">
-        var _sr_data = {"algorithm":"HMAC-SHA256","expires":"1375992000","issued_at":"1375987060","oauth_token":"CAADkpnjyyEwBAJ0AKQ2MhzPvvnZAxMZAQ1HeZBYDaTH7PrmNJsaD3L2Fzud6SZCzAjIh9ktXSGuVUbeie5qTDxwHrv3P5zWsjRkZAxyProxz5c0Gp9U2Sc32r6p1bXteySTfjxBBipXy310lwC4NZBywHMo3gvzy84SWjq31ZCG6wZDZD","user":{"country":"us","locale":"en_GB","age":{"min":"21"}},"user_id":"37302520"}
-      </script>
-    
-      <script type="text/javascript" language="javascript" src="sortonsevents/sortonsevents.nocache.js"></script> 
-    
+      <script src="projectname/projectname.nocache.js"></script> 
       <script src="//connect.facebook.net/en_US/all.js"></script> 
-    
     </head> 
-    
     <body style="overflow=hidden;"> 
-    
       <div id='fb-root'></div> 
-
       <div id="gwt"></div> 
-
     </body> 
-    
     </html>
-
-The only difference should be the \<script id="signedRequest"\> which is picked up when Facebook posts data to the servlet.
-
-<dt>Get Firefox</dt>
-
-For the GWT plugin to inside the Facebook iframe, you'll have to download an older version of Firefox. I use 15, maybe some newer ones work but there's a [bug report](https://code.google.com/p/google-web-toolkit/issues/detail?id=4468) for this problem. It only affects hosted mode, not deployed apps.
-
-Download: [Firefox 15](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/15.0/), [Firebug](http://getfirebug.com/). 
-
-<dt>Edit hosted.html</dt>
-
-You'll also need to edit war/app_name/hosted.html to remove ".top" from "var topWin = window.top;" about 70% down the file.
+```
+    mvn gwt:run
  
-      var pluginFinders = [
-        findPluginXPCOM,
-        findPluginObject,
-        findPluginEmbed,
-      ];
-      var topWin = window.top;
-      var url = topWin.location.href;
-  
-You'll have to do this regularly, I think at least each time you compile/deploy it will reset. Don't forget to restart the server too, not just refresh.
-I have System.out.println("Entry point"); at the beginning of my entry point so I can quickly if it's stalled just as GWT should start. 
- 
-<dt>Edit Hosts</dt>
+### Edit Hosts
 
-I can't remember what the issue was, now, but rather than localhost or 127.0.0.1 behaving well in your developers.facebook.com/apps settings, I have a fake domain (testbed.org.org) in my hosts file that Facebook posts to. Maybe it was Same Origin Policy related.
+Facebook won't accept API calls from domains you haven't specified in the developer console, so you need to have your local server matching this. E.g. I have dev.sortons.ie in my settings and then I add an entry to my hosts file pointing dev.sortons.ie to 127.0.0.1 and this solves the problem.
 
-<dt>Turn off Secure Browsing</dt>
 
-So, your Site URL and Canvas URL will be `http://testbed.org.org:8888/?gwt.codesvr=127.0.0.1:9997`. You'll have `https://testbed.org.org:8888/?gwt.codesvr=127.0.0.1:9997` as the Secure Canvas URL but dev mode doesn't do https, so you'll be [disabling secure browsing on Facebook](https://www.facebook.com/settings?tab=security) and will have to remember to test everything works.
+### SSL
+For apps running in Facebook frames (Canvas and Page Tab), SSL is required. 
 
-<dt>Run Configurations</dt>
+use Apache to forward https://localhost/appengine to http://localhost:8888
+this will also forward https://dev.sortons.ie/appengine to http://localhost:8888
+working with https locally will throw certificate errors. 
 
-Add "-startupUrl /" (no quotes) to the Arguments in your app's Run Configuration. It's not important, but if you don't, you'll get a warning every time you start dev mode, and if you do, it will print out the URL from the previous section so you can double click it. 
+Follow these steps to generate a self signed certificate for dev.sortons.ie 
+http://brianflove.com/2014/12/01/self-signed-ssl-certificate-on-mac-yosemite/
+
+Then in Finder in the Go menu Go to folder... /private/etc/apache2/ssl
+Open Keychain Access.
+Drag and drop the .crt file into the System keychain. (it will prompt for your admin password)
+
+If you've trouble, clear any earlier certificate you may have been using (localhost), make sure you're definitely on https and restart your browser.   
+
+http://www.robpeck.com/2010/10/google-chrome-mac-os-x-and-self-signed-ssl-certificates/#.VbJhOrdsDkA
+
+Then superdevmode won't work because it doesn't support SSL – the solution is to click on the shield in the address bar and make an exception to allow the site communicate insecurely.
+
+might have to change the bind address to match (I'm not sure as I did that first)
+but definitely have to "click on the shield icon in the url bar, and select "Load unsafe scripts""
+https://code.google.com/p/google-web-toolkit/issues/detail?id=7538
