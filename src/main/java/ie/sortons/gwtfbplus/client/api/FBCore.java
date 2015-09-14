@@ -3,6 +3,8 @@ package ie.sortons.gwtfbplus.client.api;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
+import ie.sortons.gwtfbplus.client.overlay.FbResponse;
+
 /**
  * Class that wraps facebook Javascript SDK
  * 
@@ -27,7 +29,7 @@ public class FBCore {
 	/**
 	 * Wrapper method
 	 */
-	public native void api (String path, AsyncCallback<JavaScriptObject> callback) /*-{
+	public native void api (String path, AsyncCallback<FbResponse> callback) /*-{
 		var app=this;
 		$wnd.FB.api (path, function(response){
 	        app.@ie.sortons.gwtfbplus.client.api.FBCore::callbackSuccess(Lcom/google/gwt/user/client/rpc/AsyncCallback;Lcom/google/gwt/core/client/JavaScriptObject;)(callback,response);
