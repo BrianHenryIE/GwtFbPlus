@@ -7,13 +7,14 @@ Applications made with this library include [Sortons Events](http://apps.faceboo
 
 Feedback on my code would be appreciated. My email address is brian.henry@sortons.ie
 
+The most important page to read on the Facebook SDK, which you need to understand to use this library is [Using the Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api/v2.4).
+
 ## Quickstart
 I assume you're using Maven and you're comforatble with Git – i.e. you have both installed.  Open a command prompt/terminal window, change directory (cd) to the folder you'd like the codes stored in (Sites/Workspace/etc.) and type: 
 
     git clone https://github.com/BrianHenryIE/GwtFbPlus.git
-Then install the library into your local Maven repository using:
+Change to the directory created and install the library into your local Maven repository using:
 
-    cd GwtFbPlus
     mvn install
 Add the following lines to your project's pom.xml dependency list:
 
@@ -33,6 +34,9 @@ The project GwtProJsonSerializer is needed but is not in Maven Central or Sonaty
     mvn install
 
 ## Using the library
+
+```private FBCore fbCore = GWT.create(FBCore.class);```
+
 
     This information is hugely incomplete since Devmode was deperecated.
 
