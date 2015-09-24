@@ -5,7 +5,7 @@
 	<artifactId>GwtFbPlus</artifactId>
 	<name>GwtFb+</name>
 	<description>Provides helpers and widgets for using the Facebook API with GWT.</description>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 
 	<properties>
