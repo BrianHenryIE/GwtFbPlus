@@ -1,0 +1,222 @@
+{
+  "131737309490": {
+    "events": {
+      "data": [
+        {
+          "description": "***Welcome to Wonderland Freshers***
+
+On Thursday September 22nd Snowsports, DUBES, DUDJ and Trinity Ents invite you to join us on our descent down the rabbit hole into the TURKS HEAD where we’ll consume some magical elixirs and paint the roses red.
+
+Come along and explore this eclectic venue as you unwind the night to find three different rooms each with their own distinct musical vibes including up & coming Dublin rappers Damola and Sam Ojo.
+
+http://www.wordupcollective.com/sam-ojo/
+
+http://www.wordupcollective.com/damola/
+
+***Tickets***
+Can be purchased from the DUBES & Snowsports stands in front square from Monday September 19th onwards! For €7  you will gain entry to this magical night and membership of either society.
+
+***Dress Code***
+This Tea Party will be well and truly bonkers and we invite you to dispel your inhibitions and embrace your inner Mad Hatter!",
+          "end_time": "2016-09-23T00:00:00+0100",
+          "name": "House of Hatters",
+          "place": {
+            "name": "Turks Head Dublin",
+            "location": {
+              "city": "Dublin",
+              "country": "Ireland",
+              "latitude": 53.344833074571,
+              "longitude": -6.26747,
+              "zip": "dubli"
+            },
+            "id": "7748609247"
+          },
+          "start_time": "2016-09-22T22:00:00+0100",
+          "id": "144334812684489"
+        },
+        {
+          "description": "|||||LINE UP ANNOUNCED SOON|||||
+
+They say that paradise is not a place but a state of mind.
+
+Well this Freshers Week Wednesday night Paradise is a very real place.
+
+Get lost among the clouds, follow the crowds and join us in heaven (on earth) for a night of glittering debauchery and dancing. 
+
+Let DU Players and VDP whisk you away, sprinkle you in sparkles and keep the Freshers Ball going long after the clock strikes 12.
+
+Just because you’re in heaven doesn’t mean you have to behave like an angel. Come and dance the night away with all of the other saints and sinners of sesh.
+
+Let your dreams get caught and live your wildest Freshers fantasies on the dance floor of The Academy. 
+
+This will be the Freshers’ Ball of all your dreams.
+
+Disclaimer: There will be excessive amounts of glitter in the air so be prepared to sparkle whether you like it or not.",
+          "end_time": "2016-09-22T04:00:00+0100",
+          "name": "Freshers Ball",
+          "place": {
+            "name": "The Academy",
+            "location": {
+              "city": "Dublin",
+              "country": "Ireland",
+              "latitude": 53.347746217131,
+              "longitude": -6.2619139498852,
+              "street": "57 Middle Abbey Street",
+              "zip": "1"
+            },
+            "id": "112813520933"
+          },
+          "start_time": "2016-09-21T22:00:00+0100",
+          "id": "295586397479604"
+        }
+      ],
+      "paging": {
+        "cursors": {
+          "before": "MTQ0MzM0ODEyNjg0NDg5",
+          "after": "Mjk1NTg2Mzk3NDc5NjA0"
+        },
+        "next": "https://graph.facebook.com/v2.7/131737309490/events?access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&pretty=0&limit=2&after=Mjk1NTg2Mzk3NDc5NjA0"
+      }
+    },
+    "feed": {
+      "data": [
+        {
+          "story": "Trinity Ents added a new photo.",
+          "created_time": "2016-09-09T16:36:34+0000",
+          "id": "131737309490_10154474294919491"
+        },
+        {
+          "story": "Trinity Ents added an event.",
+          "created_time": "2016-09-08T19:48:50+0000",
+          "id": "131737309490_144334812684489"
+        }
+      ],
+      "paging": {
+        "previous": "https://graph.facebook.com/v2.7/131737309490/feed?limit=2&since=1473438994&access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&__paging_token=enc_AdBNlE7aRSW519AfAgWwnX0qlmZAEJq6GnoLVTCbL17FflSDZAb0RZBLzom519FSjAO1aMVdQGT4zZBuzisPOi34rTdaD02WIrEd2MDIXeskfdIWVgZDZD&__previous=1",
+        "next": "https://graph.facebook.com/v2.7/131737309490/feed?limit=2&access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&until=1473364130&__paging_token=enc_AdB3BUnmTQtZBN2zXgzMq8flaD9jOjBKA0ZATN6E4ZA5oanF0YfK485zei6R42ZBFz3ZCLoZCZBUCcERGXpUzF7mkoMejDH"
+      }
+    },
+    "id": "131737309490"
+  },
+  "139957459378369": {
+    "events": {
+      "data": [
+        {
+          "description": "UCD Ents Presents:
+The UCD Freshers Ball 
+The Academy Dublin,
+Monday 19th September
+
+Welcome to UCD. It's time for your first lesson - The UCD Freshers' Ball. This is a must for all UCD First Year Students. Tickets sell out every year so don't miss out!
+
+Early Bird Tickets - €12
+Full ticket Price - €15
+
+Featuring:
+
+THE STRYPES
+Perhaps one of the biggest rock bands to emerge from Ireland in the past 5 years, the Strypes have taken the world by storm with their energetic stage performances and endless discography. From their humble beginings in Co. Cavan, the Strypes have toured the world in the past few years, selling out shows wherever they go.  
+
+HERMITAGE GREEN
+One of the busiest and most beloved bands accross the country, Hermitage Green return to Dublin for this exclusive UCD perfornance. Having spent much time touring in the UK and Australlia, HG are guaranteed to entertain with their unique acoustic folk rock sound.
+
+JOEL FLETCHER
+Fresh off his breathtaking performance at Creamfields, Joel Flethcher hits DUblin for one night only - for the UCD Frehers' Ball. Hailing from Australlia, Joel is on of Oz's most exciting prospects. Speciallizing in Big Room EDM Music, Joel has already worked with the likes of Hardwell, Afrojack, Avicii and more. His track \"Swing\" launched him into the spotlight in 2013, hitting No.2 in the Australian charts. 
+
+IVY NATIONS
+Described as having \"a new-wave 80's sound, mixing big choruses with driving beats and hook-laden synths and guitars\". Ivy Nations first single \"The Mile Road\" reached number #3 on the HypeM Twitter chart in Sept 2015. The bands
+ follow up single, \"You are the Centre of Me,\" premiered on BitCandy and has since received significant airplay at home (chosen as record of the week on national broadcasters RTE 2fm, and Today FM), in the US, and in Australia.",
+          "end_time": "2016-09-20T03:00:00+0100",
+          "name": "The UCD Freshers Ball 2016 ***Click GOING to win 2 Tickets***",
+          "place": {
+            "name": "The Academy",
+            "location": {
+              "city": "Dublin",
+              "country": "Ireland",
+              "latitude": 53.347746217131,
+              "longitude": -6.2619139498852,
+              "street": "57 Middle Abbey Street",
+              "zip": "1"
+            },
+            "id": "112813520933"
+          },
+          "start_time": "2016-09-19T22:29:00+0100",
+          "id": "622038621296173"
+        },
+        {
+          "description": "TOGETHER // BLACK MONDAY // 
++ OFFICIAL UCD BLACK MONDAY EVENT
+
+On Mondays We Wear Black
+
+To celebrate the start of a new college season we're back with our annual Black Monday event which has Sold Out the likes of Button Factory, Twisted Pepper, Hangar + more
+
+To get yourself on our €5 Cheaplist for Monday
+- Comment \"On Mondays We Wear Black\"
+- Tag a mate + Share the event
+
+LINEUP:
+More To Be Announced - 
+Steven McAdam b2b Dylan Singleton
+Gavin Healy b2b Adam Doherty
+Ethan Hughes b2b Lee Tucker
+
+In Association With UCD Ents - Offical UCD Black Monday
+
+Cheaplist €5
+Full price €10
+
+Doors 11pm 
+Door price TBC
+Over 18s Door Policy 
+GOV ID Required - Club Rules Apply 
+
+Together 2016 Season",
+          "end_time": "2016-09-13T02:30:00+0100",
+          "name": "Black Monday [€5 Party] - Official UCD - Button Factory",
+          "place": {
+            "name": "Button Factory",
+            "location": {
+              "city": "Dublin",
+              "country": "Ireland",
+              "latitude": 53.345019871238,
+              "longitude": -6.2643915248421,
+              "street": "Curved Street, Temple Bar",
+              "zip": "2"
+            },
+            "id": "129868223697316"
+          },
+          "start_time": "2016-09-12T22:30:00+0100",
+          "id": "1784004665155887"
+        }
+      ],
+      "paging": {
+        "cursors": {
+          "before": "NjIyMDM4NjIxMjk2MTcz",
+          "after": "MTc4NDAwNDY2NTE1NTg4NwZDZD"
+        },
+        "next": "https://graph.facebook.com/v2.7/139957459378369/events?access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&pretty=0&limit=2&after=MTc4NDAwNDY2NTE1NTg4NwZDZD"
+      }
+    },
+    "feed": {
+      "data": [
+        {
+          "message": "Welcome back to UCD! This Monday is Black Monday, a must for all students, and we are hosting the Official UCD Black Monday at the Button Factory! Cheaplist only €5. Don't miss out!",
+          "story": "UCD Ents shared Together's event.",
+          "created_time": "2016-09-09T13:59:10+0000",
+          "id": "139957459378369_1307001999340570"
+        },
+        {
+          "story": "UCD Ents updated their cover photo.",
+          "created_time": "2016-09-07T13:42:09+0000",
+          "id": "139957459378369_1304603016247135"
+        }
+      ],
+      "paging": {
+        "previous": "https://graph.facebook.com/v2.7/139957459378369/feed?limit=2&since=1473429550&access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&__paging_token=enc_AdDGXbV0ZBgC9rDZAat4Leemp0BTfoerOXJZBnwTP007eaTavm2bvWD4cEjjq8BPdv7rKHB2XcbPEXOL2hQ0SNDzcFsiJiPoxdmzA0SVYZBPsqdijwZDZD&__previous=1",
+        "next": "https://graph.facebook.com/v2.7/139957459378369/feed?limit=2&access_token=EAACEdEose0cBAGDMvWNvm9dT56assBYA82vQZCfKOnJBSRklfhEa5NVgY7qCgHzhHiPupLeQfSnvxBDV42Y3Mk5nBORZAiagZCehZCWFe4gYKirW0xHaCvqm4fYYECgfl7ZBYJ22urcAPpmUONqXP38lmArBKGhju86DsIogC0QZDZD&until=1473255729&__paging_token=enc_AdBKVaOTzXblSKvP2lSeiTaMJqrRwTHOSCv0Oln1OxZCx4ffp4YPBNJyfQ5dpnjyhYXtTyLH3xGULVnkftb8cOGslYoyN5EZBKgRWJoKDpGmwJBwZDZD"
+      }
+    },
+    "id": "139957459378369"
+  }
+  }

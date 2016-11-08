@@ -1,0 +1,865 @@
+{
+  "events": {
+    "data": [
+      {
+        "description": "***Welcome to Wonderland Freshers***
+
+On Thursday September 22nd Snowsports, DUBES, DUDJ and Trinity Ents invite you to join us on our descent down the rabbit hole into the TURKS HEAD where we’ll consume some magical elixirs and paint the roses red.
+
+Come along and explore this eclectic venue as you unwind the night to find three different rooms each with their own distinct musical vibes including up & coming Dublin rappers Damola and Sam Ojo.
+
+http://www.wordupcollective.com/sam-ojo/
+
+http://www.wordupcollective.com/damola/
+
+***Tickets***
+Can be purchased from the DUBES & Snowsports stands in front square from Monday September 19th onwards! For €7 + membership you will gain entry to this magical night and membership of either society. You must be a member of DUBES or Snowsports to attend.
+
+***Dress Code***
+This Tea Party will be well and truly bonkers and we invite you to dispel your inhibitions and embrace your inner Mad Hatter!",
+        "end_time": "2016-09-23T00:00:00+0100",
+        "name": "House of Hatters",
+        "place": {
+          "name": "Turks Head Dublin",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344833074571,
+            "longitude": -6.26747,
+            "zip": "dubli"
+          },
+          "id": "7748609247"
+        },
+        "start_time": "2016-09-22T22:00:00+0100",
+        "id": "144334812684489"
+      },
+      {
+        "description": "|||||LINE UP ANNOUNCED SOON|||||
+
+They say that paradise is not a place but a state of mind.
+
+Well this Freshers Week Wednesday night Paradise is a very real place.
+
+Get lost among the clouds, follow the crowds and join us in heaven (on earth) for a night of glittering debauchery and dancing.
+
+Let DU Players and VDP whisk you away, sprinkle you in sparkles and keep the Freshers Ball going long after the clock strikes 12.
+
+Just because you’re in heaven doesn’t mean you have to behave like an angel. Come and dance the night away with all of the other saints and sinners of sesh.
+
+Let your dreams get caught and live your wildest Freshers fantasies on the dance floor of The Academy.
+
+This will be the Freshers’ Ball of all your dreams.
+
+Disclaimer: There will be excessive amounts of glitter in the air so be prepared to sparkle whether you like it or not.",
+        "end_time": "2016-09-22T04:00:00+0100",
+        "name": "Freshers Ball",
+        "place": {
+          "name": "The Academy",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.347746217131,
+            "longitude": -6.2619139498852,
+            "street": "57 Middle Abbey Street",
+            "zip": "1"
+          },
+          "id": "112813520933"
+        },
+        "start_time": "2016-09-21T22:00:00+0100",
+        "id": "295586397479604"
+      },
+      {
+        "description": "Roll up, roll up, for the hottest ticket around. The circus has come to town, and Law Soc, DU Dance and DU circus are the ring masters. Carnivlaw (see what we did there?) will bewitch your mind and ensnare your senses, as you dance the night away in Opium Rooms with antics that are only suitable for the big top. Clear your schedule for one of the biggest nights of Freshers Week on Tuesday, September 20th for the laughably low price of 7 euros.
+
+Dancers? Check
+Jugglers? Check
+Photo booths? You know it
+Popcorn? You're damn right
+
+The only thing missing is candy floss, slushies and face painters.
+
+Oh wait.
+
+We. Have. Them. Too.
+
+So come one, come all, for a night you’ll never remember, with friends you’ll never forget. An event so fun, it should be illegal*. so quit clowning around (#Puns) and put your dancing shoes on.
+
+Carnivlaw. Is. Here.
+
+Welcome to the house of fun.",
+        "end_time": "2016-09-21T01:00:00+0100",
+        "name": "CarnivLaw",
+        "place": {
+          "name": "Opium Rooms",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.33667,
+            "longitude": -6.26577,
+            "street": "26 Wexford Street",
+            "zip": "2"
+          },
+          "id": "294915887352969"
+        },
+        "start_time": "2016-09-20T22:00:00+0100",
+        "id": "502015753331134"
+      },
+      {
+        "description": "Dia daoibh agus céad mile fáilte to the first and biggest event of Seachtain na bhFreisir 2016. To start us off with a ‘bang mór’ this year; Trinity Ents along with help from An Cumann Gaelach, SUAS and The Hist have lined up an ‘oíche den chéad scoth’ for all you Freisirí and returners alike.
+
+On the eve of Monday 19th September District 8 will be dubh le daoine, taken over for one massive seisiún that’ll carry on go moch ar maidin. Two massive acts are lined up and ready: Katie Laffan, indie pop queen fresh from a set at ‘An Picnic Leictreac’ will be starting off the night getting us all suas agus ag rince. https://www.facebook.com/katie.laffan/
+
+Following her is our main headlining Gaeilgeoir: Daithí. https://www.facebook.com/daithimusic/ The experimental DJ who hit the scene playing in finals of TV shows ‘All Ireland Talent Show’ and Sky’s ‘Must Be The Music’, Daithí is now smashing amach award-winning hits such as ‘Mary Keanes Introduction’ agus ‘Loves on Top’ sure to have the dancefloor filled. After playing a packed tent at ‘Bál na Tríonóide’ last year Daithí is sure to be a crowd-pleaser.
+
+The whole night will be accompanied by TCD’s very own TradSoc getting the céilí going in the smoking area.
+
+Ticéidí will be on sale soon at a price of €10. Ná cailígí amach ar seo, This Party’s Not Cóisir.
+
+Thar 18 amháin / Over 18’s only
+
+Cearta dhúiltiúcháin againne / ROAR",
+        "end_time": "2016-09-20T02:00:00+0100",
+        "name": "Cóisir//DAITHÍ//Katie Laffan",
+        "place": {
+          "name": "District 8",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.34231,
+            "longitude": -6.27591,
+            "street": "135-138 Francis Street, Dublin 8",
+            "zip": "D8"
+          },
+          "id": "606226396162126"
+        },
+        "start_time": "2016-09-19T22:00:00+0100",
+        "id": "1786712664905855"
+      },
+      {
+        "description": "Trinity Ents Presents: Freshers' Week
+
+Make sure to click attending and keep up to date with the lineup as it's released each day this week!
+
+Monday:
+Coisir
+https://www.facebook.com/events/1786712664905855/?ti=ia
+
+Turseday:
+CarnivLaw
+https://www.facebook.com/events/502015753331134/
+
+Wednesday:
+Freshers ball
+https://www.facebook.com/events/295586397479604/
+
+Thursday:
+House of Hatters
+https://www.facebook.com/events/144334812684489/",
+        "end_time": "2016-09-23T11:00:00+0100",
+        "name": "Trinity Ents Freshers' Week",
+        "place": {
+          "name": "Trinity Ents",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344417961759,
+            "located_in": "107652805959910",
+            "longitude": -6.259464270266
+          },
+          "id": "131737309490"
+        },
+        "start_time": "2016-09-19T09:00:00+0100",
+        "id": "1136803873075556"
+      },
+      {
+        "description": "MILHOUSE X TRINITY ENTS PRESENT: HOMERPALOOZA #2
+HANGAR
+11:00
+€2/6/8
+
+SQUISHY TIME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+-------------------------------------------------------------------------------
+
+** COMMENT \"HOMERPALOOZA\" ON EVENT WALL FOR €2 ENTRY FOR FIRST 100 PEOPLE (BEFORE 11:30) **
+
+** COMMENT HOMERPALOOZA ON EVENT WALL FOR €8 CHEAPLIST **
+
+** €6 ENTRY FOR ALL TRINITY ID CARD HOLDERS (UNTIL 12:30) **
+
+**FREE ENTRY FOR FIRST 10 PEOPLE WITH GLASSES OR FLOOD PANTS**(UNTILL HALF 11) **
+
+**FREE ENTRY FOR FIRST 10 PEOPLE WHO SELL ME THEIR SOUL**(UNTILL HALF 11) WATCH HERE - https://www.youtube.com/watch?v=yt1Bf28sYvY
+
+--------------------------------------------------------------------------------
+
+Since I began running parties I never thought I'd get to my 20th one, BUT here we are now!!!!
+
+To thank you all for making Milhouse the best mid-week party in the world!!, I'll be teaming up with my good friends over at Trinity Ents to gurentee you all one hell of a night filled with he cheapest drink deals, €2 entry before 11:30 for the first 100 people and even 14 DJ's playing your favourite tunes spread across 3 rooms all night long !!
+
+ Weather it be House/Techno or Disco, my resident DJ's have you all covered!!!!
+
+This is the perfect start to get you back into that Mid-Week madness and have yourself prepared for when College life returns !!!
+
+All of this is promised to everyone who will be looking to get twisted with everyones favourite MILHOUSE!!!
+
+Flaming Moes, Atomic Squishes and even some ice cold Duff Beers are all available to quench that thirst that you are all so eagerly waiting to do!!!
+
+------------------------------------------------------------------------------------
+
+Line Up:
+
+The Nuclear Power Plant: (HOUSE//FEEL GOOD MUSIC)
+Jake Dodd
+Conor Foley B2B Jamie Mann
+Paul Fitzgerald
+
+Moes Tavern: (PABLOS DISCO BAR)
+Mark Doyle B2B Sean Hanney
+Oisin Egan
+Dylan Mullen B2B Bill Horrigan
+
+The Treehouse Of Horrors: (TECHNO)
+Josh Reid
+Conor O'Clearigh
+Andrew Sharkey B2B John Dolan
+
+
+----------------------------------------------------------------------------
+
+THINGS TO EXPECT
+- €2 Entry Before 11:30 !!!!
+- €6 Entry For All Trinity ID Card Holders Until 12:30!!!
+- Cheap entry throughout the whole night!!
+- My very own Face Painter turning you into your favorite Simpsons character!!
+- Amazing Simpsons Visuals!!
+-  14 DJS Spread across 3 Rooms of the best music from the citys best DJs!!
+- The ultimate House classics and moderns from the best selectors in Dublin!!
+- Amazing Disco anthems !!
+- Simpsons drinks!!
+- Savage Cheap Drink Deals!!
+- A lot of Yellow!!
+- 800 people in spectacles celebrating the life and times of Me, Milhouse - weekly!!",
+        "end_time": "2016-09-09T03:00:00+0100",
+        "name": "Milhouse X Trinity Ents Presents: Homerpalooza #2",
+        "place": {
+          "name": "Hangar",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.343556907405,
+            "longitude": -6.2624136464809,
+            "street": "Andrews Lane",
+            "zip": "2"
+          },
+          "id": "367614736725502"
+        },
+        "start_time": "2016-09-08T23:00:00+0100",
+        "id": "1675367409446454"
+      },
+      {
+        "description": "The biggest night of the year is back.
+
+Friday April 15th 2016 will see the return of Trinity Ball.
+
+If you cannot collect your Trinity Ball ticket this Friday you MUST let us know the name of the person collecting it on your behalf in advance by sending an email to ticketing@trinityball.ie or calling 8961827 before noon tomorrow (14th April) at the latest.
+
+Ticket collection is between 9.00am - 14.00pm from Goldsmith Hall, Pearse St. You will need your ball ticket reference code (which was emailed to you) and personal ID (student id, passport, drivers licence). If you have nominated someone to collect tickets on your behalf it is up to you to ensure that they have the correct reference code and if possible your ID.
+
+Follow this page for all the latest news on the Ball as well as competions to win FREE tickets for you and your friends.",
+        "end_time": "2016-04-16T05:00:00+0100",
+        "name": "Trinity Ball 2016 // April 15th // SOLD OUT",
+        "place": {
+          "name": "Trinity Ents",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344417961759,
+            "located_in": "107652805959910",
+            "longitude": -6.259464270266
+          },
+          "id": "131737309490"
+        },
+        "start_time": "2016-04-15T22:00:00+0100",
+        "id": "889840294457149"
+      },
+      {
+        "description": "This committee is a chance for anyone who wants to be involved to put themselves forward for a position they think will suit them!
+
+This committee will meet once a fortnight in full and will be chaired by the Ents Officer. The other not elected sitting members of the committee are the JCR Ents Officer and the Communications and Marketing Officer.
+
+So here's the positions that are available!
+
+Secretary
+- Will be responsible for ensuring Ents Mailing Lists are gathered and kept and that weekly updates about Ents events are sent to as many students as possible. Will be responsible for taking minutes at bi-weekly meetings of the Ents Committee.
+
+Treasurer
+- Will be responsible for reviewing proposals for financial expenditure in conjunction with the Ents Officer and will provide financial oversight in tandem with the Ents Officer.
+
+Equipment / Technical Officer
+- Will be responsible in conjunction with the Ents Officer for overseeing the rental and use of the Ents Equipment. Can be first point of contact for all rentals and maintenance of equipment. Will be available to assist in the set up of musical and DJ equipment. Technical experience is recommended for this role.
+
+Night Officer
+- The night officer will be responsible in conjunction with the Ents Officer for managing aspects of Ents in an off campus club or venue environment. This could include management of promotional staff for events and running of club nights. This is for you if clubs are your thing.
+
+Live Music Officer
+- The live music officer is responsible for finding the local talent within Trinity and in conjunction with the Ents Officer putting on gigs and opportunities for them to play. They will also work with the Ents Officer in booking higher profile artists to play in on campus venues.
+
+PRO
+- The PRO is responsible for the promotion and promotional material of Ents in conjunction with the Ents Officer and the Communications and Marketing Officer. They will be given the social media platform of Trinity Ents to promote events and given resources for poster design and staff promotion. (Flyering etc...)
+
+Photography & Video Officer
+- There are a huge amount of Ents events every year and very little of the events are filmed or photographed. The Photography and Video Officer's job is to ensure events are captured and promoted online.
+
+Ordinary Committee Members (X3)
+- There will be 3 Ordinary Committee Members who's roles will be general and at the discretion of the Ents Officer.
+
+Each position will be given 90 seconds to speak and voting will take place after each positions candidates have spoken. Nominations will be allowed on the night but must be seconded.
+
+If you wish to nominate yourself and put yourself forward send an e-mail to ents@tcdsu.org with the position you want to run for.",
+        "name": "Trinity Ents AGM // Thursday 7th April",
+        "place": {
+          "name": "Arts block - Trinity College",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.343675334921,
+            "located_in": "163803993646187",
+            "longitude": -6.2569562030302,
+            "street": "Trinity College"
+          },
+          "id": "161336630582027"
+        },
+        "start_time": "2016-04-07T18:30:00+0100",
+        "id": "1555950358030688"
+      },
+      {
+        "description": "The annual student race day is back by popular demand!
+
+Get your ticket now for THE event of our final week of term. On Wednesday the 6th April, take your time to get your glam on for one of the most successful and entertaining days of the year.
+
+With the oh-so student friendly prices of €12, you cannot go wrong. Enter the code THRSOC at the check out. Tickets WILL SELL OUT WELL IN ADVANCE so we advise you get them as soon as possible to avoid disappointment.
+
+See all you giddy gallopers there!",
+        "name": "Student Race Day - TICKETS STILL ON SALE IN TCDSU",
+        "place": {
+          "name": "Leopardstown Racecourse",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.266005636555,
+            "longitude": -6.1947824913609,
+            "street": "Leopardstown Racecourse",
+            "zip": "18"
+          },
+          "id": "51361557459"
+        },
+        "start_time": "2016-04-06T13:00:00+0100",
+        "id": "1703811356502128"
+      },
+      {
+        "description": "Are you ready for the most anticipated music battle of the year?
+
+We are delighted to announce that this years Battle of The Bands: The Final will take place on Wednesday the 30th of March in The Button Factory. One band will be crowned the winner after making their way through some the hotely contested & competitive semi-final // and with their crown comes the glory of THEIR VERY OWN SLOT ON THE MAINSTAGE AT TRINITY BALL.
+
+The bands that will be dualing it out are as follows:
+
+-Trinity Bells
+-Nobody's Hereos
+-KOJAQUES
+-Voxx
+-The Temps
+-Jester
+
+AND WILDCARDS;
+The Noel Fortune Orchestra
+Micheál & The Watermelons
+
+
+The winners will be decided by our 3 esteemed judges on the night (more details to be released). See you there!",
+        "name": "Battle of The Bands: The Final [free entry]",
+        "place": {
+          "name": "The Button Factory",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.2968889,
+            "longitude": -6.2945514
+          },
+          "id": "200709173289750"
+        },
+        "start_time": "2016-03-30T20:00:00+0100",
+        "id": "1566866836975758"
+      },
+      {
+        "description": "Zodiac,Cheese & Trinity Ents welcome Mr Gordo for their Paddy's day special. This rising talent hails from Bristol UK. So much like our own St Patrick he's come from the UK to save your Paddy's day plans.
+
+We've 2 rooms packed with exciting home grown talent from Ireland and the UK. Expect funk to techno with eveything in between. Rather than spend the day meandering around packed streets looking for your friends, join us for the Shamrock Shake!!
+
+LINE UP :
+ROOM 1:
+Zodiac  - Funk/Disco/Light House
+	☘Mr Gordo 1.30am to close
+	☘Tom Parry 1 12am-1.30am
+	☘Alex Turner10.45pm-12am
+	☘MisFitz 9pm - 10.45pm
+
+ROOM 2:
+Cheese - House/Techno
+       ☘Jack Skehan 2am- close
+       ☘Rob Fitz 12.45am - 2am
+       ☘Max Waterstone 11.15pm-12.45am
+        ☘String Theory Dublin - 10pm-11.15pm
+
+What is the cost of this you might ask?
+€5 - earlybirds (as they catch the worm ;))
+€7 - Second release
+€10 - on the door
+€3 - The Zodiac special ( if it's your star sign on the day)",
+        "name": "Shamrock Shake w/ Mr Gordo",
+        "place": {
+          "name": "Turks Head Dublin",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344833074571,
+            "longitude": -6.26747,
+            "zip": "dubli"
+          },
+          "id": "7748609247"
+        },
+        "start_time": "2016-03-17T21:00:00+0000",
+        "id": "1508191199489703"
+      },
+      {
+        "description": "THE BLUE PLANET \"a natural history of the oceans\"
+
+A night of appreciating all things aquatic and Attenborough. Beginning in Trinity let us take you away for a lovely rail ride on a special visit to the sea side. For just ONE night, we will be given private access to one of Ireland's largest aquariums where we will get an insight into the lives of our aquatic friends, have some presips and delight in the beauty of life!
+
+Following our underwater adventure, we will sail the short distance to our next destination where we will have the deep underwater beats from our shoals of DUDJ and BoraBora Dublin.  All hands will be on decks one may say!
+
+This promises to be the most delicatably moist way to spend you Sunday //
+
+TICKETS ON SALE TUESDAY THE 8TH OF MARCH @ 12PM via YPLAN
+First released tickets are €12 ( Sharp snapper sale)
+Second release tickets are €15",
+        "name": "The Blue Planet",
+        "place": {
+          "name": "Trinity Ents",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344417961759,
+            "located_in": "107652805959910",
+            "longitude": -6.259464270266
+          },
+          "id": "131737309490"
+        },
+        "start_time": "2016-03-13T20:00:00+0000",
+        "id": "1080105812040706"
+      },
+      {
+        "description": "The Battle of The Bands is back!
+
+With the top act winning a slot on the mainstage of Trinity Ball, this is one dual you'll want to win. Our semi finals will be taking place on Monday 7th & Tuesday 8th of March in The Workman's Club, Wellington Quay.
+
+Entries are open to music makers with at least one current or past pupil of Trinity College Dublin. We strongly encourage variation in the performers so whether it's rock, rap, even classical // we want to hear you!
+
+To enter email ents@tcdsu.org with the title \"Battle of The Bands '16 entry\"
+
+See you there",
+        "end_time": "2016-03-08T22:00:00+0000",
+        "name": "The Trinity Ball '16 Battle of The Bands [Semi Finals]",
+        "place": {
+          "name": "The Workman's Club, Dublin",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.345487511464,
+            "longitude": -6.2664944581503,
+            "street": "10 Wellington Quay",
+            "zip": "2"
+          },
+          "id": "130639826971778"
+        },
+        "start_time": "2016-03-07T19:00:00+0000",
+        "id": "1053773274664581"
+      },
+      {
+        "description": "BoraBora are teaming up with their best friends over at Trinity Ents, with an aim to make real changes in the lives of people of the night. What better timing than to ignore the other parties on the eve of the General Election.
+
+We’ll be having our first rally of the campaign on the 25th February at the Button Factory. Get on down and find out more about our musical policies on disco, funk and 90s house.
+
+We’ll be treating all our faithful supporters to appearances from guest speakers:
+Rory “When you get to know him, Enda’s really not that bad” Hughes,
+Ross “I was never a member of the RA” McMahon
+Dave “Joan Burton? Ah you would” Gray b2b Nick “That money was just resting in my account” Nowlan
+Pauric “Session through the recession” Doherty.
+
+Here at BoraBora, we are committed to standing up for the ordinary man, and do so by keeping taxes low and vibes high.
+
+With a portion of proceeds going to 100 Minds, we also hope to do our bit for those who rely on Childline's essential services.
+
+Comment for Cheaplist x
+
+Advanced  tickets available using YPlan: https://yplanapp.com/dublin/borabora-a-party-for-the-people-47315/
+
+Attire: Dail non-uniform day
+Tax: €5 Cheaplist / Advanced Tickets, €7 after midnight
+
+Doors 11pm.",
+        "name": "BoraBora, Tonight at Button Factory. Tickets on the Door.",
+        "place": {
+          "name": "Button Factory",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.345019871238,
+            "longitude": -6.2643915248421,
+            "street": "Curved Street, Temple Bar",
+            "zip": "2"
+          },
+          "id": "129868223697316"
+        },
+        "start_time": "2016-02-25T23:00:00+0000",
+        "id": "677830529026811"
+      },
+      {
+        "description": "This Sunday Trinity Ents, TFM, DUDJ, and TTV are delighted to present this years line up launch which will include a live visual and audio stream from an undisclosed location.
+
+There will be an opprotunity to win a ticket for Trinity Ball by tuning in from 9pm // more details to follow!",
+        "name": "Trinity Ball 16 Line Up Launch Live",
+        "start_time": "2016-02-21T21:00:00+0000",
+        "id": "447727922069045"
+      },
+      {
+        "description": "NOTORIOUS, TRINITY ENTS & TRINITY CANCER SOCIETY present
+'Let's Dance' for David Bowie
+
+This Thursday, Notorious is shaking it up a little - leaning towards our 90s side, we have created a night in dedication to David Bowie. Preceded by the illustrious Trinity Come Dancing, \"Let's Dance!\" for David Bowie pays homage to the cultural icon that is, was and forever will be David Bowie. We have the heroes of DUDJ's playing the funkiest Bowie and 90's tunes to have you dancing in the streets, or the Button Factory as it may be. With Jack Dunne taking over the decks for the second half of the night, we will be returning to our hip-hop roots but don't fear, we always 90s on the brain. Drinks are cheap, the starman's here and best of all, the proceeds go to the worthy cause of the Trinity Cancer Society.
+
+It's time to brush the stardust off your most funky outfit and go Aladdin-sane in the Button Factory for one night in memory of the Thin White Duke.
+
+Over 18s
+ID required
+ROAR",
+        "end_time": "2016-02-05T02:30:00+0000",
+        "name": "NOTORIOUS presents \"Let's Dance!\" for David Bowie w/ Trinity Cancer Society",
+        "place": {
+          "name": "Button Factory",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.345019871238,
+            "longitude": -6.2643915248421,
+            "street": "Curved Street, Temple Bar",
+            "zip": "2"
+          },
+          "id": "129868223697316"
+        },
+        "start_time": "2016-02-04T23:00:00+0000",
+        "id": "1678454332398058"
+      },
+      {
+        "description": "Trinity Come Dancing features 9 celebrities - some of Trinity's most well known, influential and powerful people - stepping out of their comfort zone and into the spotlight with 9 of our professionals - dancers with oodles of experience, who've danced since they were 4, who've competed on the world stage - to perform everything from Ballet to bellydancing, from Irish to Cha-Cha. We will be announcing our saucy couples over the next few days so keep your eyes peeled for your pick this year!
+
+They'll be performing in front of our panel of judges, whose scores will be combined with your votes on the night to find ourselves a champion of Trinity Come Dancing 2016!
+
+Tickets are €10 and are available throught YPlan! After party at Notorious, Dublin's biggest 90s and hip-hop night, included in ticket price.",
+        "name": "Trinity Come Dancing 2016",
+        "place": {
+          "name": "The Button Factory",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.2968889,
+            "longitude": -6.2945514
+          },
+          "id": "200709173289750"
+        },
+        "start_time": "2016-02-04T19:30:00+0000",
+        "id": "1721926174706900"
+      },
+      {
+        "description": "Do you fancy winning a trinity ball ticket?
+How about busting a Guinness World Record to start off mental health week in spectacular fashion?
+
+If the answer is yes, then climb aboard, we feel the same way.
+
+On the 1st of February, we the students of trinity, in association with the SU, VDP, SUAS, the Phil, and FM104, are going to break the Guinness world record for Longest Soul Train EVER...
+
+The target? 427 people
+The time? A mere 30 minutes of your time this will take!!!
+The prize? 1 trinity ball ticket
+
+Bring your most flamboyant soul themed costumes and post \"Love, Peace and Soul\", tagging two friends to be in with a chance to win a Trinity Ball Ticket! And more prizes to come.
+
+While breaking this world record, we will also be fundraising for mental health and Childline. In case you are too eager to wait for the day to donate, there are two links below where you can do so right now!
+
+In the words of the wise Don Cornelius, \"Love, peace and soul\"
+
+https://www.100minds.org/2016/926/john-lane
+
+https://www.100minds.org/2016/978/stephen-o-leary",
+        "end_time": "2016-02-01T13:35:00+0000",
+        "name": "Guinness World Record Attempt - Largest Soul Train Dance in association with S2S",
+        "place": {
+          "name": "Front Square",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344124883721,
+            "longitude": -6.2583613953488,
+            "street": "College Green Dublin 2"
+          },
+          "id": "282093191821194"
+        },
+        "start_time": "2016-02-01T13:00:00+0000",
+        "id": "1249667068381905"
+      },
+      {
+        "description": "***GET READY TO RUMBLE***
+
+Suas Trinity are pleased to announce the arrival of our biggest event of the year (and the biggest event of RAG week 2016) - RAG WEEK RUMBLE!!
+
+You may think charity is all about rainbows, sunshine and unicorns (?) but sometimes all you want to see are some amateur boxers battle it out in the ring for your personal entertainment, right? And you're in luck because we've just so happened to have found willing participants to represent their college societies in the fight to see which society will be crowned champion of RAG week! They've been receiving professional training and preparing for what could be the most glorious night of their lives! (Maybe)
+
+The societies taking part include:
+VTP, DU Snowsports, the Phil, the Hist, Law Review, Football Soc, Food & Drink, Hockey Soc, DUPA, Europa, Horse Racing, DUDJ, Trad Soc, TCDSU, SCI-FI, Bio-Soc, Suas, Surfing Soc, Q Soc, S2S and more!
+
+There will be around 15 fights, and then the ring will be taken away to make room for some groovy afters with all the music you love to love!
+
+Early bird tickets for both events will be €15*, ticket sale dates will be announced soon.
+
+**There will be drink deals on the night and many more exciting announcements to come**
+
+To be in with a chance of winning a €25 bar tab for the night comment -  'Let's get Ready to Rumble' and tag a mate!
+
+* All ticket sales and proceeds made on the night will go directly to the RAG week fund.
+
+See you there
+- Suas (I had a good boxing joke, but I forgot the punch line)",
+        "name": "RAG WEEK RUMBLE",
+        "place": {
+          "name": "Hangar",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.343556907405,
+            "longitude": -6.2624136464809,
+            "street": "Andrews Lane",
+            "zip": "2"
+          },
+          "id": "367614736725502"
+        },
+        "start_time": "2016-01-28T19:30:00+0000",
+        "id": "741433809335053"
+      },
+      {
+        "description": "Starting to feel like you’ve met all the people worth meeting in Trinity? Is the college social scene starting to feel a little stagnant? We have the answer!
+
+This RAG week, join The Global Development Society, ENTS, the Environmental Society, DUGES, Amnesty and SUAS, for a night in the Pav of raising mates for charity!
+Yes, you heard me! Simply by making friends (or just bringing along your old ones), YOU can raise money for charity! And what's even better is that everything you donate is DOUBLED by the Alumni Office so you're really giving twice as much!
+
+Imagine speed dating…. without the guaranteed shift (we’ll leave that one up to you)… BUT WITH GUARANTEED FRIENDSHIP!
+“Where?”, “When?”, I hear you ask. From 7 to 8.30pm in the Pav on Wednesday the 27th of January. There’ll be a raffle, spot prizes, and of course, new people to be met. And, should you find the whole idea a little daunting, the venue is perfect for… ahem… social lubrication.
+
+Don't forget to pay the €2 at the door - all proceeds going to charity!
+
+We’ll see all you soon-to-be-mates there!",
+        "name": "Raising Mates! Rag Week 2016",
+        "place": {
+          "name": "The Pavilion Bar",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.342753851943,
+            "longitude": -6.2530185054561,
+            "street": "Trinity College Dublin",
+            "zip": "Dublin 2"
+          },
+          "id": "173791819320878"
+        },
+        "start_time": "2016-01-27T19:00:00+0000",
+        "id": "451161221758630"
+      },
+      {
+        "description": "Doing something fun and engaging with your morning is no better way to start your day. What we promise to do is to set you up for a full day of feeling good, being productive and having a sense of peace.
+
+With the positive people of VDP, Players, the beats of DUDJ and TCD Afro Caribbean Society, the culinary delights of French Soc, the bites of DU Food and Drink, the balance of Yoga Soc and a breath from Meditation Soc - it's the brightest way to wake up this Rag Week.
+
+We have our fab groove floor open throughout the event as well as a schedule of 30min activities throughout the day which are FREE with entry. Once you're in you can come and go so we recommend you plan to come back a few times over the course of the event to get in all of the fun.
+
+Entry is €4 on YPlan and at the door. Keep an eye on the page for further updates coming throughout the next week!",
+        "end_time": "2016-01-27T12:00:00+0000",
+        "name": "Rave and Give - Rag Week Wednesday (8am - 12pm)",
+        "place": {
+          "name": "Players Theatre",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344658374649,
+            "longitude": -6.2542993765238
+          },
+          "id": "522682304411434"
+        },
+        "start_time": "2016-01-27T08:00:00+0000",
+        "id": "1705472309668809"
+      },
+      {
+        "description": "It's here for the second time, The Big Fat Quiz of the Year is back again to ask you those fruitful questions in aid of Rag Week!
+
+Starting at 7.30pm, teams of 4 will face a number of rounds in the battle for some of the best prizes on offer during RAG week! Trinity Ents, the Graduate Students' Union and TTV are partnering up to help bring the biggest quiz on Trinity grounds of the year.
+
+Hosted in the beautiful setting of the Trinity Dining Hall, this event has a very limited capacity so if you feel you could get a team to take yourselves to the top of table quiz, seize that chance now as the first prize is..
+
+****4 X Trinity Ball Tickets!****
+[with a cheeky announcement in relation to the Ball line up in Rag Week, we can promise these will be hot property!]
+
+At just €5 per head (€20 per team of 4), tables are available on YPlan as you read quizzers. Book now to avoid disappointment!
+
+Get sharpenning your general knowledge and your pencils gentlepeople, as the Big Fat Rag Quiz of the year is here!",
+        "name": "The Big Fat Table Quiz of The Year - Rag Week 2016",
+        "place": {
+          "name": "Trinity College Dining Hall",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.345054862964,
+            "longitude": -6.2572895628843,
+            "street": "Trinity College"
+          },
+          "id": "337084796318630"
+        },
+        "start_time": "2016-01-26T19:30:00+0000",
+        "id": "1009059589164644"
+      },
+      {
+        "description": "★★★★We are Happy to announce that the Amnesty Slave auction will be taking during the intermission AND  beautiful Trinity Belles will be performing some of their sweetest tunes★★★★
+
+The inaugural Rose competition, a collaborative effort between Trinity VDP and Trinity Ents, will take place on Monday the 25th of January,in the Sugar Club, Lesson street and kicking off RAG week 2016!
+
+Dress code is formal so bring your finest jackets and cocktail dresses!
+
+There will be a photography stand so make sure to look the part!
+
+Tickets €8 on the door
+4 for €20 on Yplan
+
+All proceeds go to Trinity RAG
+
+Who will win this most coveted title? Come along on the 25th and find out.",
+        "name": "The Rose of Trinity - RAG Week 2016",
+        "place": {
+          "name": "The Sugar Club",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.335628391687,
+            "longitude": -6.2567258731665,
+            "street": "8 Lower Leeson Street",
+            "zip": "D 2"
+          },
+          "id": "36061256043"
+        },
+        "start_time": "2016-01-25T19:30:00+0000",
+        "id": "542990779201588"
+      },
+      {
+        "description": "Get ready to inspire yourself this 2016 with the one and only - RAG (Raise and Give) 2016.
+
+RAG is the time of year where Trinity comes together on a college wide level to Raise crucial funds to Give to our RAG charities (which you can see below!). What's really exciting is that this is a fantastic opprotunity for YOU to get involved, make friends and really give back to the fantastic community that is Trinity. We believe that everyone has something to give this year - your time, your talents, your goofs and your gaffs - to bring the true potential of Trinity's giving power to light!
+
+And what's even better is that our fundraising efforts are graciously DOUBLED for the first €10,000 raised with kindest of thanks from Trinity Alumni Office. This means that every contribution really counts and goes much further than you could know. To get involved, please follow this link to register your interest:
+https://secure.www.alumniconnections.com/olc/pub/TDD/event/showEventForm.jsp?form_id=195715&preview=TDD2015121143315_0
+
+Here's a lil preview of what we have in store!
+-Monday 25th: The Rose of Trinity with VDP (Rose and Escourt applications currently being accepted)
+-Tuesday 26th: The RAG Dining Hall Quiz with TTV
+-Thursday 27th: Rumble for RAG with Suas, The Raise and Give Party
+-Friday 28th: The Trinity Games
+-Monday 1st Feb: Chapel Gig (Artist tba) with S2S for Mental Health Week
+-Thursday 4th Feb: Trinity Come Dancing with DUDance
+
+We also strongly encourage people to run their own mini fundraisers during the week, the sky is really the limit to what you can do and we have tonnes of idea for you to swipe from us such as:
+-Dress up day (Be sponsored to dress up as a super hero, zombie, hun, Lady Gaga - you name it)
+-Sponsored silences (collect to can it)
+- Shave or Dye
+- Sponsored cable ties
+-Many more!
+Just shoot us a message about your interests and we will come up with some wild ideas for you to get involved or we will assign you to one of our teams!
+
+Here's the link to get on board with the RAG vibe and we are super looking forward to having you on board this year - it's going to be sensational!
+
+
+RAG charities:
+VDP - St.Vincent de Paul
+VTP - Voluntary Tuition Programme
+Cancer Soc - Cancer society Ireland
+Amnesty
+Student Hardship Fund - Vital support for students in financial hardship
+FLAC - Free Legal Advice Clinic
+Suas - Education in developing countries
+M.O.V.E. - Medical Overseas Voluntary Electives
+D.O.V.E. - Dental Overseas Voluntary Electives
+TAP - Trinity Access Programmes
+Enactus - Entrepreneurial action to improve the quality of life and standard of living for people in need.
+S2S - Student to Student peer mentoring and support
+Postgraduate Hardship Fund",
+        "name": "Trinity RAG Week 2016",
+        "place": {
+          "name": "Trinity College Dublin (TCD)",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.34376661814,
+            "longitude": -6.2570668626744,
+            "street": "college green"
+          },
+          "id": "331474456944399"
+        },
+        "start_time": "2016-01-25T11:30:00+0000",
+        "id": "989846484422479"
+      },
+      {
+        "description": "Trinitones, Trinity Chaplaincy and Trinity Ents have come together to bring you a festive winter warmer to get you into the spirit of Christmastime this Wednesday the 16th of December.
+
+The beautiful surroundings of the Chapel and the a Cappella stylings of Trinitones go hand in hand to make this one of the most wholeheartedly stunning Christmas events - even better all in aid of two extremely deserving charities - ALONE and The Peter McVerry Trust.
+
+Doors: 7pm (come early to get a front seat!)
+Admission: €?? (you decide!)
+
+Donations will be taken after the performance, we believe that charity is for everyone regardless of how much you give. Let us delight you and afterwards, you can give your gift to these fine causes in return for our gift to you this Christmas time.
+
+Here's a little more information on the charities we will be supporting :)
+
+ALONE is a charity organization in Ireland highlighting the plight of older people living alone. With more and more people, young and old, coming forward with feelings of loneliness and isolation we felt this was an extremely deserving and important cause to support.
+
+As well we will be supporting The Peter McVerry Trust,  a charity set up by Fr Peter McVerry to reduce homelessness and the harm caused by drug misuse and social disadvantage.
+
+See you all there you christmasy kids x",
+        "name": "this fine eve - Christmas Chapel Gig with Trinitones",
+        "place": {
+          "name": "Trinity College Chapel",
+          "location": {
+            "city": "Dublin",
+            "country": "Ireland",
+            "latitude": 53.344738285211,
+            "longitude": -6.2581716890563
+          },
+          "id": "331317870250306"
+        },
+        "start_time": "2015-12-16T19:00:00+0000",
+        "id": "922674321152055"
+      }
+    ],
+    "paging": {
+      "cursors": {
+        "before": "MTQ0MzM0ODEyNjg0NDg5",
+        "after": "OTIyNjc0MzIxMTUyMDU1"
+      },
+      "next": "https://graph.facebook.com/v2.7/131737309490/events?access_token=EAACEdEose0cBAOTXsEhjCchuZBZCDBQjcOMjguYZB8veU2eZCJzF8NSt6XcbhhKUkz5fczdBOZCqHtgmvEXetcn72Kx6nCcQoxDkqWQHaOZB5JO5WzwYYrAKlWO7MN6GWzafXx43gUdFgOlAZCROcgXph7AUiRY4Vc0bOpH1aSiPQZDZD&pretty=0&limit=25&after=OTIyNjc0MzIxMTUyMDU1"
+    }
+  },
+  "id": "131737309490"
+}

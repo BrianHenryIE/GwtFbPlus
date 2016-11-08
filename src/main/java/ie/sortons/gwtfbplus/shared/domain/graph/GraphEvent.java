@@ -6,106 +6,115 @@ import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 
 public class GraphEvent implements JsonSerializable {
 
-	/**
-	 * The event ID.
+	/*
+	 * The event ID
 	 */
 	String id;
 
-	/**
-	 * The event's cover photo.
-	 */
-	GraphEventCover cover;
-
-	/**
-	 * Long-form description of the event.
-	 */
-	String description;
-
-	/**
-	 * End time of the event, if one has been set.
-	 */
-	Date end_time;
-
-	/**
-	 * Indicates whether the event only has a date specified, but no time.
-	 */
-	boolean is_date_only;
-
-	/**
-	 * The location of the event, if any.
-	 */
-	String location;
-
-	/**
-	 * The name of the event.
-	 */
-	String name;
-
-	/**
-	 * The profile that created the event. User|Page|Group
-	 */
-	GraphEventOwner owner;
-
 	/*
-	 * TODO The group the event belongs to, if any.
-	 */
-	// Group parent_group
-
-	/**
-	 * Who can see the event.
-	 */
-	String privacy; // TODO enum?
-
-	/**
-	 * Start time of the event.
-	 */
-	Date start_time;
-
-	/**
-	 * The link users can visit to buy a ticket to this event. Can only be added
-	 * to events created by Pages.
-	 */
-	String ticket_uri;
-
-	/**
-	 * Any timezone that the event has.
-	 */
-	String timezone;
-
-	/**
-	 * Last time that the event was updated.
-	 */
-	Date updated_time;
-
-	/**
-	 * Venue hosting the event, if any.
-	 */
-	GraphEventVenue venue;
-
-	/**
-	 * The number of people who have RSVPed to this event as 'attending'.
+	 * Number of people attending the event
 	 */
 	int attending_count;
 
-	/**
-	 * The number of people who have RSVPed to this event as 'declined'.
+	/*
+	 * Can guests invite friends
+	 */
+	boolean can_guests_invite;
+
+	/*
+	 * The category of the event
+	 */
+	// enum category {ART_EVENT, BOOK_EVENT, MOVIE_EVENT, FUNDRAISER,
+	// VOLUNTEERING, FAMILY_EVENT, FESTIVAL_EVENT, NEIGHBORHOOD,
+	// RELIGIOUS_EVENT, SHOPPING, COMEDY_EVENT, MUSIC_EVENT, DANCE_EVENT,
+	// NIGHTLIFE, THEATER_EVENT, DINING_EVENT, FOOD_TASTING, CONFERENCE_EVENT,
+	// MEETUP, CLASS_EVENT, LECTURE, WORKSHOP, FITNESS, SPORTS_EVENT, OTHER}
+
+	/*
+	 * Cover picture
+	 */
+	// CoverPhoto cover
+
+	/*
+	 * Number of people who declined the event
 	 */
 	int declined_count;
 
-	/**
-	 * The number of people who have RSVPed to this event as 'maybe'.
+	/*
+	 * Long-form description
+	 */
+	String description;
+
+	/*
+	 * End time, If one has been set
+	 */
+	Date end_time;
+
+	/*
+	 * Can see guest list
+	 */
+	boolean guest_list_enabled;
+
+	/*
+	 * Number of people interested in the event
+	 */
+	int interested_count;
+
+	/*
+	 * 
+	 * Whether or not the event has been marked as canceled
+	 */
+	boolean is_canceled;
+
+	/*
+	 * Whether the event is created by page or not
+	 */
+	boolean is_page_owned;
+
+	/*
+	 * Whether the viewer is admin or not
+	 */
+	boolean is_viewer_admin;
+
+	/*
+	 * Number of people who maybe going to the event
 	 */
 	int maybe_count;
 
-	/**
-	 * The number of people who have not yet RSVPed to this event.
+	/*
+	 * Event name
+	 */
+	String name;
+
+	/*
+	 * Number of people who did not reply to the event
 	 */
 	int noreply_count;
 
-	/**
-	 * The number of people who were invited to this event.
+	/*
+	 * The profile that created the event
 	 */
-	int invited_count;
+	// owner
+
+	/*
+	 * The group the event belongs to
+	 */
+	// Group parent_group
+
+	/*
+	 * Event Place information
+	 */
+	GraphPlace place;
+
+	/*
+	 * Start time
+	 */
+	Date start_time;
+
+	/*
+	 * The link users can visit to buy a ticket to this event
+	 */
+	String ticket_uri;
 
 	public String getId() {
 		return id;
@@ -115,12 +124,28 @@ public class GraphEvent implements JsonSerializable {
 		this.id = id;
 	}
 
-	public GraphEventCover getCover() {
-		return cover;
+	public int getAttending_count() {
+		return attending_count;
 	}
 
-	public void setCover(GraphEventCover cover) {
-		this.cover = cover;
+	public void setAttending_count(int attending_count) {
+		this.attending_count = attending_count;
+	}
+
+	public boolean isCan_guests_invite() {
+		return can_guests_invite;
+	}
+
+	public void setCan_guests_invite(boolean can_guests_invite) {
+		this.can_guests_invite = can_guests_invite;
+	}
+
+	public int getDeclined_count() {
+		return declined_count;
+	}
+
+	public void setDeclined_count(int declined_count) {
+		this.declined_count = declined_count;
 	}
 
 	public String getDescription() {
@@ -139,20 +164,52 @@ public class GraphEvent implements JsonSerializable {
 		this.end_time = end_time;
 	}
 
-	public boolean isIs_date_only() {
-		return is_date_only;
+	public boolean isGuest_list_enabled() {
+		return guest_list_enabled;
 	}
 
-	public void setIs_date_only(boolean is_date_only) {
-		this.is_date_only = is_date_only;
+	public void setGuest_list_enabled(boolean guest_list_enabled) {
+		this.guest_list_enabled = guest_list_enabled;
 	}
 
-	public String getLocation() {
-		return location;
+	public int getInterested_count() {
+		return interested_count;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setInterested_count(int interested_count) {
+		this.interested_count = interested_count;
+	}
+
+	public boolean isIs_canceled() {
+		return is_canceled;
+	}
+
+	public void setIs_canceled(boolean is_canceled) {
+		this.is_canceled = is_canceled;
+	}
+
+	public boolean isIs_page_owned() {
+		return is_page_owned;
+	}
+
+	public void setIs_page_owned(boolean is_page_owned) {
+		this.is_page_owned = is_page_owned;
+	}
+
+	public boolean isIs_viewer_admin() {
+		return is_viewer_admin;
+	}
+
+	public void setIs_viewer_admin(boolean is_viewer_admin) {
+		this.is_viewer_admin = is_viewer_admin;
+	}
+
+	public int getMaybe_count() {
+		return maybe_count;
+	}
+
+	public void setMaybe_count(int maybe_count) {
+		this.maybe_count = maybe_count;
 	}
 
 	public String getName() {
@@ -163,20 +220,20 @@ public class GraphEvent implements JsonSerializable {
 		this.name = name;
 	}
 
-	public GraphEventOwner getOwner() {
-		return owner;
+	public int getNoreply_count() {
+		return noreply_count;
 	}
 
-	public void setOwner(GraphEventOwner owner) {
-		this.owner = owner;
+	public void setNoreply_count(int noreply_count) {
+		this.noreply_count = noreply_count;
 	}
 
-	public String getPrivacy() {
-		return privacy;
+	public GraphPlace getPlace() {
+		return place;
 	}
 
-	public void setPrivacy(String privacy) {
-		this.privacy = privacy;
+	public void setPlace(GraphPlace place) {
+		this.place = place;
 	}
 
 	public Date getStart_time() {
@@ -195,68 +252,24 @@ public class GraphEvent implements JsonSerializable {
 		this.ticket_uri = ticket_uri;
 	}
 
-	public String getTimezone() {
-		return timezone;
-	}
+	/*
+	 * Timezone
+	 */
+	// enum timezone
 
-	public void setTimezone(String timezone) {
-		this.timezone = timezone;
-	}
+	/*
+	 * The type of the event
+	 */
+	// type enum
+	// {private, public,group, community
+	// }
 
-	public Date getUpdated_time() {
-		return updated_time;
-	}
+	/*
+	 * Last update time
+	 */
+	// datetime updated_time
 
-	public void setUpdated_time(Date updated_time) {
-		this.updated_time = updated_time;
-	}
-
-	public GraphEventVenue getVenue() {
-		return venue;
-	}
-
-	public void setVenue(GraphEventVenue venue) {
-		this.venue = venue;
-	}
-
-	public int getAttending_count() {
-		return attending_count;
-	}
-
-	public void setAttending_count(int attending_count) {
-		this.attending_count = attending_count;
-	}
-
-	public int getDeclined_count() {
-		return declined_count;
-	}
-
-	public void setDeclined_count(int declined_count) {
-		this.declined_count = declined_count;
-	}
-
-	public int getMaybe_count() {
-		return maybe_count;
-	}
-
-	public void setMaybe_count(int maybe_count) {
-		this.maybe_count = maybe_count;
-	}
-
-	public int getNoreply_count() {
-		return noreply_count;
-	}
-
-	public void setNoreply_count(int noreply_count) {
-		this.noreply_count = noreply_count;
-	}
-
-	public int getInvited_count() {
-		return invited_count;
-	}
-
-	public void setInvited_count(int invited_count) {
-		this.invited_count = invited_count;
-	}
-
+	
+	
+	
 }

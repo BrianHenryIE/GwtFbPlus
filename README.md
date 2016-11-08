@@ -1,16 +1,14 @@
 # ie.sortons.GwtFb+
 
-This is a collection of widgets, overlays, gson classes and a servlet for building Facebook Canvas apps with Google Web Toolkit on Google App Engine. 
-The original GwtFB library, that has been subsumed, has its home with [olams](https://github.com/olams/GwtFB), and there are more GWT Facebook libraries on GitHub by [denormans](https://github.com/denormans/FacebookGWT), [handstandtech](https://github.com/handstandtech/Facebook-API) and [adrianmigraso](https://github.com/adrianmigraso/Facebook-ConnectJS-GWT-Port).
+This is a collection of widgets, overlays, Gson classes and a servlet for building Facebook Canvas apps with Google Web Toolkit on Google App Engine. 
+The original GwtFB library, which has been subsumed, has its home with [olams](https://github.com/olams/GwtFB), and there are more GWT Facebook libraries on GitHub by [denormans](https://github.com/denormans/FacebookGWT), [handstandtech](https://github.com/handstandtech/Facebook-API) and [adrianmigraso](https://github.com/adrianmigraso/Facebook-ConnectJS-GWT-Port).
 
 Applications made with this library include [Sortons Events](http://apps.facebook.com/sortonsevents/) ([source](https://github.com/BrianHenryIE/Friends--Events)) and [UCD Events](http://apps.facebook.com/ucdevents/) ([source](https://github.com/BrianHenryIE/UCD-Events)). 
 
-Feedback on my code would be appreciated. My email address is brian.henry@sortons.ie
-
-The most important page to read on the Facebook SDK, which you need to understand to use this library is [Using the Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api/v2.4).
+The most important page to read on the Facebook SDK, which you need to understand to use this library is [Using the Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api/).
 
 ## Quickstart
-I assume you're using Maven and you're comforatble with Git – i.e. you have both installed.  Open a command prompt/terminal window, change directory (cd) to the folder you'd like the codes stored in (Sites/Workspace/etc.) and type: 
+I assume you're using Maven and you're comforatble with Git – i.e. you have both installed.  Open a Terminal, change directory (cd) to the folder you'd like the code stored in (Sites/Workspace/etc.) and type: 
 
     git clone https://github.com/BrianHenryIE/GwtFbPlus.git
 Change to the directory created and install the library into your local Maven repository using:
@@ -21,7 +19,7 @@ Add the following lines to your project's pom.xml dependency list:
 	<dependency>
 		<groupId>ie.sortons</groupId>
 		<artifactId>gwtfbplus</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</dependency>
 Add this to your ProjectName.gwt.xml file:
 
@@ -35,7 +33,36 @@ The project GwtProJsonSerializer is needed but is not in Maven Central or Sonaty
 
 ## Using the library
 
-```private FBCore fbCore = GWT.create(FBCore.class);```
+```FBCore fbCore = GWT.create(FBCore.class);```
+
+
+```fbCore.init(appid, status, xfbml, version);```
+
+```
+fbCore.login(new AsyncCallback<JavaScriptObject>() {
+	public void onSuccess(JavaScriptObject response) {
+		...
+	}
+	public void onFailure(Throwable caught) {
+
+	}
+}, "comma,separated,permissions");
+```
+
+```
+fbCore.api("me/", new AsyncCallback<FbResponse>() {
+		
+		@Override
+		public void onSuccess(FbResponse response) {
+			...
+		}
+
+		@Override
+		public void onFailure(Throwable caught) {
+				// TODO Auto-generated method stub
+		}
+	});
+```
 
 
     This information is hugely incomplete since Devmode was deperecated.
@@ -67,16 +94,62 @@ The project GwtProJsonSerializer is needed but is not in Maven Central or Sonaty
 
 Facebook won't accept API calls from domains you haven't specified in the developer console, so you need to have your local server matching this. E.g. I have dev.sortons.ie in my settings and then I add an entry to my hosts file pointing dev.sortons.ie to 127.0.0.1 and this solves the problem.
 
+```sudo nano /etc/hosts```
+
+```127.0.0.1       dev.sortons.ie```
+
 
 ### SSL
-For apps running in Facebook frames (Canvas and Page Tab), SSL is required. 
+For apps running in Facebook frames (Canvas and Page Tab), SSL is required.  
 
-use Apache to forward https://localhost/appengine to http://localhost:8888
-this will also forward https://dev.sortons.ie/appengine to http://localhost:8888
+use Apache to forward https://localhost/fb to http://localhost:8080
+this will also forward https://dev.sortons.ie/fb to http://localhost:8888
+
+```sudo nano /etc/apache2/httpd.conf```
+
+Add the following two lines:
+
+```
+ProxyPass /fb/ http://localhost:8080/
+ProxyPassReverse /fb/ http://localhost:8080/
+```
+
+Uncomment the following two lines:
+
+```LoadModule ssl_module libexec/apache2/mod_ssl.so```
+
+```Include /private/etc/apache2/extra/httpd-ssl.conf```
+
+```Include /private/etc/apache2/extra/httpd-vhosts.conf```
+
+
 working with https locally will throw certificate errors. 
 
 Follow these steps to generate a self signed certificate for dev.sortons.ie 
 http://brianflove.com/2014/12/01/self-signed-ssl-certificate-on-mac-yosemite/
+
+```
+sudo nano httpd.conf
+cd /private/etc/apache2
+sudo mkdir ssl
+```
+
+```sudo ssh-keygen -f dev.sortons.ie.key```
+
+```sudo openssl req -new -key dev.sortons.ie.key -out dev.sortons.ie.csr```
+
+and be sure to enter `dev.sortons.ie` when prompted for `Common Name (e.g. server FQDN or YOUR name)`
+
+```sudo openssl rsa -in dev.sortons.ie.key -out dev.sortons.ie.nopass.key```
+
+
+
+
+
+```sudo apachectl restart```
+
+
+
 
 Then in Finder in the Go menu Go to folder... /private/etc/apache2/ssl
 Open Keychain Access.

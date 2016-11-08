@@ -1,7 +1,5 @@
 package ie.sortons.gwtfbplus.shared.domain.fql;
 
-import ie.sortons.gwtfbplus.shared.domain.graph.GraphPage;
-
 import java.util.ArrayList;
 
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
@@ -16,20 +14,7 @@ public class FqlPage implements JsonSerializable, Comparable<FqlPage> {
 	public FqlPage() {
 	}
 	
-	//TODO
-	public FqlPage(GraphPage graphPage) {
-		this.about = graphPage.getAbout();
-//		graphPage.getCategory()
-//		graphPage.getCheckins()
-//		graphPage.getDescription()
-//		graphPage.getId()
-//		graphPage.getLikes()
-//		graphPage.getLink()
-//		graphPage.getName()
-//		graphPage.getTalking_about_count()
-//		graphPage.getWere_here_count()
-	
-	}
+
 
 	public FqlPageLocation getLocation() {
 		return location;

@@ -7,6 +7,8 @@ import com.google.gwt.core.shared.GWT;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
+import ie.sortons.gwtfbplus.client.overlay.FbResponse;
+
 
 
 /**
@@ -57,7 +59,13 @@ public class FBCore {
 	 *            'v2.0'. This is a required parameter.
 	 */
 	public void init(String appId, boolean status, boolean xfbml, String version) {
-		init(appId, status, xfbml, version, null);
+		init(appId, status, xfbml, version, new Callback<Void, Exception>(){
+			@Override
+			public void onFailure(Exception reason) {
+			}
+			@Override
+			public void onSuccess(Void result) {
+			}});
 	}
 
 	public void init(final String appId, final boolean status, final boolean xfbml, final String version, final Callback<Void, Exception> callback) {
@@ -127,9 +135,16 @@ public class FBCore {
 	/**
 	 * Wrapper method for the OLD REST API
 	 */
-	public native void api (JavaScriptObject params, AsyncCallback<JavaScriptObject> callback) /*-{
+	public native void api (JavaScriptObject params, AsyncCallback<FbResponse> callback) /*-{
+		var app=this;
+		$wnd.FB.api(params,function(response){
+	    	app.@ie.sortons.gwtfbplus.client.api.FBCore::callbackSuccess(Lcom/google/gwt/user/client/rpc/AsyncCallback;Lcom/google/gwt/core/client/JavaScriptObject;)(callback,response);
+		});
+	}-*/; 
+
+	public native void api (String path, AsyncCallback<FbResponse> callback) /*-{
     	var app=this;
-    	$wnd.FB.api(params,function(response){
+    	$wnd.FB.api(path,function(response){
         	app.@ie.sortons.gwtfbplus.client.api.FBCore::callbackSuccess(Lcom/google/gwt/user/client/rpc/AsyncCallback;Lcom/google/gwt/core/client/JavaScriptObject;)(callback,response);
     	});
 	}-*/; 
@@ -165,7 +180,7 @@ public class FBCore {
 	/**
 	 * Wrapper method
 	 */
-	public native void login (AsyncCallback<JavaScriptObject> callback ,String permissions) /*-{
+	public native void login (AsyncCallback<JavaScriptObject> callback, String permissions) /*-{
        	var app=this;
         $wnd.FB.login (function(response){
     	    app.@ie.sortons.gwtfbplus.client.api.FBCore::callbackSuccess(Lcom/google/gwt/user/client/rpc/AsyncCallback;Lcom/google/gwt/core/client/JavaScriptObject;)(callback,response);

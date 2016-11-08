@@ -1,0 +1,36 @@
+{
+    "description": "Trinity Ents Presents: Freshers' Week
+
+Make sure to click attending and keep up to date with the lineup as it's released each day this week!
+
+Monday: 
+Coisir
+https://www.facebook.com/events/1786712664905855/?ti=ia
+
+Turseday:
+CarnivLaw
+https://www.facebook.com/events/502015753331134/
+
+Wednesday:
+Freshers ball
+https://www.facebook.com/events/295586397479604/
+
+Thursday:
+House of Hatters
+https://www.facebook.com/events/144334812684489/",
+    "end_time": "2016-09-23T11:00:00+0100",
+    "name": "Trinity Ents Freshers' Week",
+    "place": {
+      "name": "Trinity Ents",
+      "location": {
+        "city": "Dublin",
+        "country": "Ireland",
+        "latitude": 53.34542,
+        "located_in": "107652805959910",
+        "longitude": -6.25825
+      },
+      "id": "131737309490"
+    },
+    "start_time": "2016-09-19T09:00:00+0100",
+    "id": "1136803873075556"
+  }

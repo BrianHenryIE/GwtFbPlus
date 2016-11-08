@@ -2,49 +2,104 @@ package ie.sortons.gwtfbplus.shared.domain;
 
 import com.kfuntak.gwt.json.serialization.client.JsonSerializable;
 
-/**
- * @author brianhenry
- * @see http://stackoverflow.com/questions/10478812/facebook-graph-api-error-code-list
- * @see http://fbdevwiki.com/wiki/Error_codes
- *
- *
- *	Also got this different error structure, now JsFqlError when access token was expired using gwtfb:
- *	{"error_code":"104", "error_msg":"Requires valid signature", "request_args":[{"key":"api_key", "value":"251403644880972"},{"key":"callback", "value":"FB.__globalCallbacks.f21f3f80794af1"},{"key":"format", "value":"json-strings"},{"key":"method", "value":"fql.query"},{"key":"pretty", "value":"0"},{"key":"query", "value":"SELECT page_id, name, page_url, location FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid IN (176727859052209,133490393390530,136338279838233,176727859052209) AND NOT (page_id IN (176727859052209,136338279838233,133490393390530)) LIMIT 250)"},{"key":"sdk", "value":"joey"}]}
- *  {"error_code":"601", "error_msg":"Parser error: unexpected ',' at position 203.", "request_args":[{"key":"access_token", "value":"CAADkpnjyyEwBAJu2cd3OndZCLyQH0u4dSp1NTdBGxq2gFi6LFjx9VZAxxnxcZAuQ4StfZAf3z4vdYusv56dGDaDZCm8cZBTukhOGOynFt98ZBua4gIcrhEotYJMC7qPbBxekJh37XZCodIxC6SjRkUt4u6ik4TIEVypOgARqIdGxAsXYJZAq5XAnJRA5XVVEsyFIl5BpVZBbLOmAZDZD"},{"key":"api_key", "value":"251403644880972"},{"key":"callback", "value":"FB.__globalCallbacks.f22fdb26fac50f4"},{"key":"format", "value":"json-strings"},{"key":"method", "value":"fql.query"},{"key":"pretty", "value":"0"},{"key":"query", "value":"SELECT name, location, venue, eid, start_time, end_time, is_date_only FROM event WHERE eid IN (SELECT eid FROM event_member WHERE start_time > 'null' AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me(), me())) ORDER BY start_time LIMIT 250"},{"key":"sdk", "value":"joey"}]}
- */
 public class FbError implements JsonSerializable {
-	
+
+	private String message;
+	private String code;
+	private String error_subcode;
+
+	private String error_user_msg;
+	private String error_user_title;
+	private String fbtrace_id;
+
+	private String type;
+
 	/**
-	 * @return the message
+	 * @return A human-readable description of the error. code: An error code.
+	 *         Common values are listed below, along with common recovery
+	 *         tactics.
 	 */
 	public String getMessage() {
 		return message;
 	}
-	
+
 	/**
 	 * @return the type
 	 */
 	public String getType() {
 		return type;
 	}
-	
+
 	/**
 	 * @return the code
 	 */
 	public String getCode() {
 		return code;
 	}
+
 	/**
 	 * @return the error_subcode
 	 */
 	public String getErrorSubcode() {
 		return error_subcode;
 	}
-	
-	public String message;
-	public String type;
-	public String code;
-	public String error_subcode;
 
-	
+	public String getError_subcode() {
+		return error_subcode;
+	}
+
+	public void setError_subcode(String error_subcode) {
+		this.error_subcode = error_subcode;
+	}
+
+	/**
+	 * @return The message to display to the user. The language of the message
+	 *         is based on the locale of the API request.
+	 */
+	public String getError_user_msg() {
+		return error_user_msg;
+	}
+
+	public void setError_user_msg(String error_user_msg) {
+		this.error_user_msg = error_user_msg;
+	}
+
+	/**
+	 * @return The title of the dialog, if shown. The language of the message is
+	 *         based on the locale of the API request.
+	 */
+	public String getError_user_title() {
+		return error_user_title;
+	}
+
+	public void setError_user_title(String error_user_title) {
+		this.error_user_title = error_user_title;
+	}
+
+	/**
+	 * @return Internal support identifier. When reporting a bug related to a
+	 *         Graph API call, include the fbtrace_id to help us find log data
+	 *         for debugging.
+	 */
+	public String getFbtrace_id() {
+		return fbtrace_id;
+	}
+
+	public void setFbtrace_id(String fbtrace_id) {
+		this.fbtrace_id = fbtrace_id;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	// fbtrace_id
 }
